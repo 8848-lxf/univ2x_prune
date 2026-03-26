@@ -1,0 +1,646 @@
+[INFO] 评估日志保存至: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/logs_eval_inf_track_prune_backbone_byclaude.py/eval_20260326_213834.log
+[INFO] 配置文件: ./projects/configs_e2e_univ2x/univ2x_sub_inf_e2e_track.py
+[INFO] 原始 checkpoint: ./ckpts/univ2x_sub_inf_stg1.pth
+[INFO] backbone modelopt: ./univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/univ2x_inf_track_backbone_pruned_20260326_150910_452188_backbone_modelopt.pth
+[INFO] 微调模型: (none)
+[INFO] 评估任务: ['det', 'track', 'map']
+[INFO] 评估指标: ['bbox']
+[INFO] 数据集模式: skip_warmup (frames_per_scene=10)
+[PATCH] NuScenesEval_custom patched
+[PATCH] TrackingEval_custom patched
+[INFO] 加载插件模块: projects.mmdet3d_plugin
+[INFO] 使用设备: cuda:2
+[INFO] 正在构建 MultiAgent 模型 + 加载原始 checkpoint...
+load checkpoint from local path: ./ckpts/univ2x_sub_inf_stg1.pth
+The model and loaded state dict do not match exactly
+
+unexpected key in source state_dict: model_ego_agent.linear1.weight, model_ego_agent.linear1.bias, model_ego_agent.linear2.weight, model_ego_agent.linear2.bias, model_ego_agent.linear_feat1.weight, model_ego_agent.linear_feat1.bias, model_ego_agent.linear_feat2.weight, model_ego_agent.linear_feat2.bias, model_ego_agent.norm_feat.weight, model_ego_agent.norm_feat.bias, model_ego_agent.norm1.weight, model_ego_agent.norm1.bias, model_ego_agent.norm2.weight, model_ego_agent.norm2.bias, model_ego_agent.self_attn.in_proj_weight, model_ego_agent.self_attn.in_proj_bias, model_ego_agent.self_attn.out_proj.weight, model_ego_agent.self_attn.out_proj.bias, model_ego_agent.img_backbone.layer3.0.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.0.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.1.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.1.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.2.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.2.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.3.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.3.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.4.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.4.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.5.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.5.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.6.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.6.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.7.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.7.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.8.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.8.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.9.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.9.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.10.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.10.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.11.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.11.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.12.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.12.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.13.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.13.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.14.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.14.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.15.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.15.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.16.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.16.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.17.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.17.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.18.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.18.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.19.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.19.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.20.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.20.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.21.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.21.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.22.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.22.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer4.0.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer4.0.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer4.1.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer4.1.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer4.2.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer4.2.conv2.conv_offset.bias
+
+[INFO] 原始模型参数量: 98.29 M
+[INFO] 原始 backbone 参数量: 42.50 M
+[INFO] 正在恢复剪枝 backbone: ./univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/univ2x_inf_track_backbone_pruned_20260326_150910_452188_backbone_modelopt.pth
+[INFO] mto.restore backbone 完成
+[INFO] 剪枝 backbone 已回填到 full_model
+[INFO] 剪枝后 backbone 参数量: 38.04 M (保留 89.51%)
+[INFO] 剪枝后全模型参数量: 93.83 M
+[INFO] 全模型参数保留比例: 95.46%
+[INFO] 构建 val 数据集 (subset_mode=skip_warmup)...
+======
+Loading NuScenes tables for version v1.0-trainval...
+4 category,
+0 attribute,
+4 visibility,
+2324 instance,
+4 sensor,
+2 calibrated_sensor,
+2196 ego_pose,
+6 log,
+67 scene,
+2196 sample,
+2196 sample_data,
+38859 sample_annotation,
+6 map,
+Done loading in 0.372 seconds.
+======
+Reverse indexing ...
+Done reverse indexing in 0.1 seconds.
+======
+[INFO] subset sampling mode=skip_warmup, start_idx=4, covered scenes=21/21, total=196
+       per-scene frames: min=3 max=10 avg=9.3
+[INFO] 数据集大小: 196
+[INFO] eval_mod = ['det', 'track', 'map']
+WARNING!!!!, Only can be used for obtain inference speed!!!!
+[INFO] 开始在完整数据集上推理...
+[INFO] 推理完成，得到 196 个样本结果
+[CHECK] outputs summary: total=196, none=0, empty=0, nonzero_box_samples=196, total_boxes=1932
+[CHECK] first non-empty output keys: ['token', 'track_bbox_results', 'boxes_3d', 'scores_3d', 'labels_3d', 'track_scores', 'track_ids', 'boxes_3d_det', 'scores_3d_det', 'labels_3d_det', 'ret_iou']
+[INFO] 开始评估...
+Start to convert detection format...
+Results writes to test_eval_pruned/univ2x_sub_inf_e2e_track/Thu_Mar_26_21_40_19_2026/results_nusc.json
+Start to convert detection format...
+Results writes to test_eval_pruned/univ2x_sub_inf_e2e_track/Thu_Mar_26_21_40_19_2026/results_nusc_det.json
+Initializing nuScenes detection evaluation
+Loaded results from test_eval_pruned/univ2x_sub_inf_e2e_track/Thu_Mar_26_21_40_19_2026/results_nusc_det.json. Found detections for 196 samples.
+Loading annotations for val split from nuScenes version: v1.0-trainval
+
+  0%|                                                                                                                                                                                                          | 0/675 [00:00<?, ?it/s]
+ 35%|██████████████████████████████████████████████████████████████████▋                                                                                                                           | 237/675 [00:00<00:00, 2362.97it/s]
+ 70%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                        | 474/675 [00:00<00:00, 1557.47it/s]
+ 96%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊        | 646/675 [00:00<00:00, 1351.49it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 675/675 [00:00<00:00, 1399.19it/s]
+Loaded ground truth annotations for 675 samples.
+[PATCH] NuScenesEval subset mode: GT filtered to 196 pred tokens
+=> Original number of boxes: 56311
+=> After distance based filtering: 56306
+=> After LIDAR and RADAR points based filtering: 56306
+=> After bike rack filtering: 56306
+=> Original number of boxes: 3477
+=> After distance based filtering: 2622
+=> After LIDAR and RADAR points based filtering: 2622
+=> After bike rack filtering: 2622
+Accumulating metric data...
+Calculating metrics...
+Saving metrics to: test_eval_pruned/univ2x_sub_inf_e2e_track/Thu_Mar_26_21_40_19_2026/det
+mAP: 0.0514
+mATE: 1.0188
+mASE: 0.7887
+mAOE: 0.9719
+mAVE: 1.3539
+mAAE: 1.0000
+NDS: 0.0497
+Eval time: 3.8s
+
+Per-class results:
+Object Class        	AP    	ATE   	ASE   	AOE   	AVE   	AAE   
+car                 	0.302 	0.944 	0.194 	0.181 	2.612 	1.000 
+truck               	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+bus                 	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+trailer             	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+construction_vehicle	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+pedestrian          	0.024 	1.215 	0.402 	1.738 	0.747 	1.000 
+motorcycle          	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+bicycle             	0.187 	1.028 	0.291 	0.828 	2.473 	1.000 
+traffic_cone        	0.000 	1.000 	1.000 	nan   	nan   	nan   
+barrier             	0.000 	1.000 	1.000 	1.000 	nan   	nan   
+[PATCH] enabled safe tracking merge for tuple frame-index edge case
+======
+Loading NuScenes tables for version v1.0-trainval...
+4 category,
+0 attribute,
+4 visibility,
+2324 instance,
+4 sensor,
+2 calibrated_sensor,
+2196 ego_pose,
+6 log,
+67 scene,
+2196 sample,
+2196 sample_data,
+38859 sample_annotation,
+6 map,
+Done loading in 0.237 seconds.
+======
+Reverse indexing ...
+Done reverse indexing in 0.1 seconds.
+======
+Initializing nuScenes tracking evaluation
+Loaded results from test_eval_pruned/univ2x_sub_inf_e2e_track/Thu_Mar_26_21_40_19_2026/results_nusc.json. Found detections for 196 samples.
+Loading annotations for val split from nuScenes version: v1.0-trainval
+
+  0%|                                                                                                                                                                                                          | 0/675 [00:00<?, ?it/s]
+ 40%|████████████████████████████████████████████████████████████████████████████▎                                                                                                                 | 271/675 [00:00<00:00, 2708.49it/s]
+ 80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                     | 542/675 [00:00<00:00, 1613.15it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 675/675 [00:00<00:00, 1492.96it/s]
+Loaded ground truth annotations for 675 samples.
+======
+Loading NuScenes tables for version v1.0-trainval...
+4 category,
+0 attribute,
+4 visibility,
+2324 instance,
+4 sensor,
+2 calibrated_sensor,
+2196 ego_pose,
+6 log,
+67 scene,
+2196 sample,
+2196 sample_data,
+38859 sample_annotation,
+6 map,
+Done loading in 0.246 seconds.
+======
+Reverse indexing ...
+Done reverse indexing in 0.1 seconds.
+======
+Loaded results from test_eval_pruned/univ2x_sub_inf_e2e_track/Thu_Mar_26_21_40_19_2026/results_nusc.json. Found detections for 196 samples.
+Loading annotations for val split from nuScenes version: v1.0-trainval
+
+  0%|                                                                                                                                                                                                          | 0/675 [00:00<?, ?it/s]
+ 39%|██████████████████████████████████████████████████████████████████████████▎                                                                                                                   | 264/675 [00:00<00:00, 2638.78it/s]
+ 78%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                         | 528/675 [00:00<00:00, 1550.96it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 675/675 [00:00<00:00, 1442.34it/s]
+Loaded ground truth annotations for 675 samples.
+[PATCH] TrackingEval subset: GT filtered to 196 pred tokens
+=> Original number of boxes: 1922
+=> After distance based filtering: 1922
+=> After LIDAR and RADAR points based filtering: 1922
+=> After bike rack filtering: 1922
+=> Original number of boxes: 3477
+=> After distance based filtering: 2622
+=> After LIDAR and RADAR points based filtering: 2622
+=> After bike rack filtering: 2622
+Accumulating metric data...
+Computing metrics for class bicycle...
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+ 33%|█████████████████████████████████████████████████████████████████                                                                                                                                  | 7/21 [00:00<00:00, 61.35it/s]
+ 67%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                                | 14/21 [00:00<00:00, 53.76it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [00:00<00:00, 58.90it/s]
+                                                                                                                                                                                                                                       
+Computed thresholds
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.4303	0.000	0.992	0.388	185	637	181	390	66	527	181	280	66
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.4813	0.000	1.020	0.359	185	637	173	408	56	468	173	239	56
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.5361	0.000	1.022	0.334	184	637	162	424	51	414	162	201	51
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.6198	0.040	1.030	0.294	184	637	151	450	36	332	151	145	36
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.6733	0.291	1.028	0.261	184	637	141	471	25	266	141	100	25
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.7019	0.297	1.052	0.235	183	637	128	487	22	240	128	90	22
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.7110	0.274	1.037	0.209	183	637	113	504	20	215	113	82	20
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.7767	0.655	1.039	0.159	183	637	84	536	17	130	84	29	17
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.7810	0.627	1.017	0.144	183	637	75	545	17	120	75	28	17
+
+Computing metrics for class bus...
+
+Computing metrics for class car...
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+ 24%|██████████████████████████████████████████████▍                                                                                                                                                    | 5/21 [00:00<00:00, 43.13it/s]
+ 48%|████████████████████████████████████████████████████████████████████████████████████████████▍                                                                                                     | 10/21 [00:00<00:00, 34.57it/s]
+ 67%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                                | 14/21 [00:00<00:00, 35.67it/s]
+ 86%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                           | 18/21 [00:00<00:00, 33.91it/s]
+                                                                                                                                                                                                                                       
+Computed thresholds
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+ 76%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                              | 16/21 [00:00<00:00, 152.70it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.4985	0.667	0.959	0.452	194	1810	730	991	89	1062	730	243	89
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+ 95%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊         | 20/21 [00:00<00:00, 196.34it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.5902	0.726	0.949	0.418	194	1810	690	1053	67	946	690	189	67
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [00:00<00:00, 202.71it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.6463	0.757	0.943	0.393	194	1810	667	1099	44	873	667	162	44
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.6604	0.768	0.936	0.365	194	1810	617	1150	43	803	617	143	43
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.6842	0.779	0.938	0.334	194	1810	574	1205	31	732	574	127	31
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.7222	0.806	0.931	0.308	194	1810	540	1252	18	663	540	105	18
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.7342	0.811	0.956	0.281	194	1810	491	1302	17	601	491	93	17
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.7543	0.825	0.946	0.256	194	1810	451	1346	13	543	451	79	13
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.7703	0.821	0.965	0.230	194	1810	407	1393	10	490	407	73	10
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.7837	0.815	0.973	0.204	194	1810	363	1440	7	437	363	67	7
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.7932	0.835	0.940	0.181	194	1810	322	1483	5	380	322	53	5
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.8148	0.856	0.873	0.156	194	1810	278	1527	5	323	278	40	5
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.8427	0.874	0.819	0.129	194	1810	230	1576	4	263	230	29	4
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.8540	0.870	0.789	0.108	194	1810	192	1615	3	220	192	25	3
+
+Computing metrics for class motorcycle...
+
+Computing metrics for class pedestrian...
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+ 57%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                                                  | 12/21 [00:00<00:00, 115.96it/s]
+                                                                                                                                                                                                                                       
+Computed thresholds
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.5719	0.000	1.234	0.171	639	175	28	145	2	155	28	125	2
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.7107	0.000	1.242	0.131	440	175	23	152	0	75	23	52	0
+
+
+  0%|                                                                                                                                                                                                           | 0/21 [00:00<?, ?it/s]
+                                                                                                                                                                                                                                       
+		MOTAR	MOTP	Recall	Frames	GT	GT-Mtch	GT-Miss	GT-IDS	Pred	Pred-TP	Pred-FP	Pred-IDS
+thr_0.7624	0.000	1.232	0.120	396	175	21	154	0	48	21	27	0
+
+Computing metrics for class trailer...
+
+Computing metrics for class truck...
+
+Calculating metrics...
+Saving metrics to: test_eval_pruned/univ2x_sub_inf_e2e_track/Thu_Mar_26_21_40_19_2026/track
+
+### Final results ###
+
+Per-class results:
+		AMOTA	AMOTP	RECALL	MOTAR	GT	MOTA	MOTP	MT	ML	FAF	TP	FP	FN	IDS	FRAG	TID	LGD
+bicycle 	0.055	1.781	0.159	0.655	637	0.086	1.039	10	73	15.8	84	29	536	17	6	0.66	1.22
+bus     	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan
+car     	0.280	1.623	0.393	0.757	1810	0.279	0.943	69	132	83.5	667	162	1099	44	93	0.45	1.30
+motorcy 	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan
+pedestr 	0.000	1.943	0.171	0.000	175	0.000	1.234	2	16	19.6	28	125	145	2	6	0.58	4.50
+trailer 	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan
+truck   	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan
+
+Aggregated results:
+AMOTA	0.112
+AMOTP	1.782
+RECALL	0.241
+MOTAR	0.471
+GT	874
+MOTA	0.122
+MOTP	1.072
+MT	81
+ML	221
+FAF	39.6
+TP	779
+FP	316
+FN	1780
+IDS	63
+FRAG	105
+TID	0.56
+LGD	2.34
+Eval time: 15.0s
+
+Rendering curves
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/fontconfig_pattern.py:127: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  self._parser.parseString(pattern)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/fontconfig_pattern.py:134: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  self._parser.resetCache()
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2022: PyparsingDeprecationWarning: 'setName' deprecated - use 'set_name'
+  val.setName(key)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2033: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  p.space         <<= oneOf(list(self._space_widths))
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:1878: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+  empty.setParseAction(raise_error)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2044: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  p.accentprefixed <<= Suppress(p.bslash) + oneOf(self._accentprefixed)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2046: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  Combine(p.bslash + oneOf(list(tex2uni)))
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2047: PyparsingDeprecationWarning: 'leaveWhitespace' deprecated - use 'leave_whitespace'
+  + Suppress(Regex("(?=[^A-Za-z]|$)").leaveWhitespace())
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2049: PyparsingDeprecationWarning: 'leaveWhitespace' deprecated - use 'leave_whitespace'
+  p.symbol        <<= (p.single_symbol | p.symbol_name).leaveWhitespace()
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2055: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  + oneOf(list(self._char_over_chars))
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2060: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  + oneOf([*self._accent_map, *self._wide_accents])
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2067: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  + oneOf(list(self._function_names))
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2078: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  p.font          <<= Suppress(p.bslash) + oneOf(list(self._fontnames))
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2081: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  + oneOf(['math' + x for x in self._fontnames])
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2102: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  p.ambi_delim    <<= oneOf(list(self._ambi_delim))
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2103: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  p.left_delim    <<= oneOf(list(self._left_delim))
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2104: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  p.right_delim   <<= oneOf(list(self._right_delim))
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2105: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  p.right_delim_safe <<= oneOf([*(self._right_delim - {'}'}), r'\}'])
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2181: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  p.subsuperop    <<= oneOf(["_", "^"])
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2209: PyparsingDeprecationWarning: 'unquoteResults' argument is deprecated, use 'unquote_results'
+  p.math_string   <<= QuotedString('$', '\\', unquoteResults=False)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2211: PyparsingDeprecationWarning: 'leaveWhitespace' deprecated - use 'leave_whitespace'
+  p.non_math      <<= Regex(r"(?:(?:\\[$])|[^$])*").leaveWhitespace()
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2221: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+  val.setParseAction(getattr(self, key))
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2237: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  result = self._expression.parseString(s)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2300: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  return self._math_expression.parseString(toks[0][1:-1])
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2245: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  self._expression.resetCache()
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2237: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  result = self._expression.parseString(s)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2300: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  return self._math_expression.parseString(toks[0][1:-1])
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2245: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  self._expression.resetCache()
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2237: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  result = self._expression.parseString(s)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2300: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  return self._math_expression.parseString(toks[0][1:-1])
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2245: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  self._expression.resetCache()
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2237: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  result = self._expression.parseString(s)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2300: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  return self._math_expression.parseString(toks[0][1:-1])
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2245: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  self._expression.resetCache()
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2237: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  result = self._expression.parseString(s)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2300: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  return self._math_expression.parseString(toks[0][1:-1])
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2245: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  self._expression.resetCache()
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2237: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  result = self._expression.parseString(s)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2300: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  return self._math_expression.parseString(toks[0][1:-1])
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2245: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  self._expression.resetCache()
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2237: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  result = self._expression.parseString(s)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2300: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  return self._math_expression.parseString(toks[0][1:-1])
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2245: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  self._expression.resetCache()
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2237: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  result = self._expression.parseString(s)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2300: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  return self._math_expression.parseString(toks[0][1:-1])
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2245: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  self._expression.resetCache()
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2237: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  result = self._expression.parseString(s)
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2300: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  return self._math_expression.parseString(toks[0][1:-1])
+/home/lixingfeng/anaconda3/envs/univ2x-opt/lib/python3.9/site-packages/matplotlib/_mathtext.py:2245: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  self._expression.resetCache()
+{'pts_bbox_NuScenes/car_AP_dist_0.5': 0.0026, 'pts_bbox_NuScenes/car_AP_dist_1.0': 0.1079, 'pts_bbox_NuScenes/car_AP_dist_2.0': 0.4552, 'pts_bbox_NuScenes/car_AP_dist_4.0': 0.6441, 'pts_bbox_NuScenes/car_trans_err': 0.944, 'pts_bbox_NuScenes/car_scale_err': 0.1941, 'pts_bbox_NuScenes/car_orient_err': 0.181, 'pts_bbox_NuScenes/car_vel_err': 2.6115, 'pts_bbox_NuScenes/car_attr_err': 1.0, 'pts_bbox_NuScenes/mATE': 1.0188, 'pts_bbox_NuScenes/mASE': 0.7887, 'pts_bbox_NuScenes/mAOE': 0.9719, 'pts_bbox_NuScenes/mAVE': 1.3539, 'pts_bbox_NuScenes/mAAE': 1.0, 'pts_bbox_NuScenes/truck_AP_dist_0.5': 0.0, 'pts_bbox_NuScenes/truck_AP_dist_1.0': 0.0, 'pts_bbox_NuScenes/truck_AP_dist_2.0': 0.0, 'pts_bbox_NuScenes/truck_AP_dist_4.0': 0.0, 'pts_bbox_NuScenes/truck_trans_err': 1.0, 'pts_bbox_NuScenes/truck_scale_err': 1.0, 'pts_bbox_NuScenes/truck_orient_err': 1.0, 'pts_bbox_NuScenes/truck_vel_err': 1.0, 'pts_bbox_NuScenes/truck_attr_err': 1.0, 'pts_bbox_NuScenes/construction_vehicle_AP_dist_0.5': 0.0, 'pts_bbox_NuScenes/construction_vehicle_AP_dist_1.0': 0.0, 'pts_bbox_NuScenes/construction_vehicle_AP_dist_2.0': 0.0, 'pts_bbox_NuScenes/construction_vehicle_AP_dist_4.0': 0.0, 'pts_bbox_NuScenes/construction_vehicle_trans_err': 1.0, 'pts_bbox_NuScenes/construction_vehicle_scale_err': 1.0, 'pts_bbox_NuScenes/construction_vehicle_orient_err': 1.0, 'pts_bbox_NuScenes/construction_vehicle_vel_err': 1.0, 'pts_bbox_NuScenes/construction_vehicle_attr_err': 1.0, 'pts_bbox_NuScenes/bus_AP_dist_0.5': 0.0, 'pts_bbox_NuScenes/bus_AP_dist_1.0': 0.0, 'pts_bbox_NuScenes/bus_AP_dist_2.0': 0.0, 'pts_bbox_NuScenes/bus_AP_dist_4.0': 0.0, 'pts_bbox_NuScenes/bus_trans_err': 1.0, 'pts_bbox_NuScenes/bus_scale_err': 1.0, 'pts_bbox_NuScenes/bus_orient_err': 1.0, 'pts_bbox_NuScenes/bus_vel_err': 1.0, 'pts_bbox_NuScenes/bus_attr_err': 1.0, 'pts_bbox_NuScenes/trailer_AP_dist_0.5': 0.0, 'pts_bbox_NuScenes/trailer_AP_dist_1.0': 0.0, 'pts_bbox_NuScenes/trailer_AP_dist_2.0': 0.0, 'pts_bbox_NuScenes/trailer_AP_dist_4.0': 0.0, 'pts_bbox_NuScenes/trailer_trans_err': 1.0, 'pts_bbox_NuScenes/trailer_scale_err': 1.0, 'pts_bbox_NuScenes/trailer_orient_err': 1.0, 'pts_bbox_NuScenes/trailer_vel_err': 1.0, 'pts_bbox_NuScenes/trailer_attr_err': 1.0, 'pts_bbox_NuScenes/barrier_AP_dist_0.5': 0.0, 'pts_bbox_NuScenes/barrier_AP_dist_1.0': 0.0, 'pts_bbox_NuScenes/barrier_AP_dist_2.0': 0.0, 'pts_bbox_NuScenes/barrier_AP_dist_4.0': 0.0, 'pts_bbox_NuScenes/barrier_trans_err': 1.0, 'pts_bbox_NuScenes/barrier_scale_err': 1.0, 'pts_bbox_NuScenes/barrier_orient_err': 1.0, 'pts_bbox_NuScenes/barrier_vel_err': nan, 'pts_bbox_NuScenes/barrier_attr_err': nan, 'pts_bbox_NuScenes/motorcycle_AP_dist_0.5': 0.0, 'pts_bbox_NuScenes/motorcycle_AP_dist_1.0': 0.0, 'pts_bbox_NuScenes/motorcycle_AP_dist_2.0': 0.0, 'pts_bbox_NuScenes/motorcycle_AP_dist_4.0': 0.0, 'pts_bbox_NuScenes/motorcycle_trans_err': 1.0, 'pts_bbox_NuScenes/motorcycle_scale_err': 1.0, 'pts_bbox_NuScenes/motorcycle_orient_err': 1.0, 'pts_bbox_NuScenes/motorcycle_vel_err': 1.0, 'pts_bbox_NuScenes/motorcycle_attr_err': 1.0, 'pts_bbox_NuScenes/bicycle_AP_dist_0.5': 0.0, 'pts_bbox_NuScenes/bicycle_AP_dist_1.0': 0.0357, 'pts_bbox_NuScenes/bicycle_AP_dist_2.0': 0.2636, 'pts_bbox_NuScenes/bicycle_AP_dist_4.0': 0.4504, 'pts_bbox_NuScenes/bicycle_trans_err': 1.0283, 'pts_bbox_NuScenes/bicycle_scale_err': 0.2905, 'pts_bbox_NuScenes/bicycle_orient_err': 0.828, 'pts_bbox_NuScenes/bicycle_vel_err': 2.4731, 'pts_bbox_NuScenes/bicycle_attr_err': 1.0, 'pts_bbox_NuScenes/pedestrian_AP_dist_0.5': 0.0, 'pts_bbox_NuScenes/pedestrian_AP_dist_1.0': 0.0, 'pts_bbox_NuScenes/pedestrian_AP_dist_2.0': 0.0203, 'pts_bbox_NuScenes/pedestrian_AP_dist_4.0': 0.0765, 'pts_bbox_NuScenes/pedestrian_trans_err': 1.2153, 'pts_bbox_NuScenes/pedestrian_scale_err': 0.4019, 'pts_bbox_NuScenes/pedestrian_orient_err': 1.7379, 'pts_bbox_NuScenes/pedestrian_vel_err': 0.7469, 'pts_bbox_NuScenes/pedestrian_attr_err': 1.0, 'pts_bbox_NuScenes/traffic_cone_AP_dist_0.5': 0.0, 'pts_bbox_NuScenes/traffic_cone_AP_dist_1.0': 0.0, 'pts_bbox_NuScenes/traffic_cone_AP_dist_2.0': 0.0, 'pts_bbox_NuScenes/traffic_cone_AP_dist_4.0': 0.0, 'pts_bbox_NuScenes/traffic_cone_trans_err': 1.0, 'pts_bbox_NuScenes/traffic_cone_scale_err': 1.0, 'pts_bbox_NuScenes/traffic_cone_orient_err': nan, 'pts_bbox_NuScenes/traffic_cone_vel_err': nan, 'pts_bbox_NuScenes/traffic_cone_attr_err': nan, 'pts_bbox_NuScenes/NDS': 0.04965058406648053, 'pts_bbox_NuScenes/mAP': 0.051408323197158046, 'pts_bbox_NuScenes/amota': 0.11160612553066852, 'pts_bbox_NuScenes/amotp': 1.7821828244682967, 'pts_bbox_NuScenes/recall': 0.2409339936569613, 'pts_bbox_NuScenes/motar': 0.4706277813474215, 'pts_bbox_NuScenes/gt': 874.0, 'pts_bbox_NuScenes/mota': 0.12178258468708351, 'pts_bbox_NuScenes/motp': 1.0721037685895969, 'pts_bbox_NuScenes/mt': 81.0, 'pts_bbox_NuScenes/ml': 221.0, 'pts_bbox_NuScenes/faf': 39.637988170385874, 'pts_bbox_NuScenes/tp': 779.0, 'pts_bbox_NuScenes/fp': 316.0, 'pts_bbox_NuScenes/fn': 1780.0, 'pts_bbox_NuScenes/ids': 63.0, 'pts_bbox_NuScenes/frag': 105.0, 'pts_bbox_NuScenes/tid': 0.5628294809407949, 'pts_bbox_NuScenes/lgd': 2.340556569343066, 'drivable_iou': 0.8400051593780518, 'lanes_iou': 0.5275188684463501, 'divider_iou': nan, 'crossing_iou': 0.5364112854003906, 'contour_iou': 0.5141813158988953}
+
+======================================================================
+评估结果 (全部指标)
+======================================================================
+
+--- Detection ---
+  pts_bbox_NuScenes/NDS: 0.04965058406648053
+  pts_bbox_NuScenes/amota: 0.11160612553066852
+  pts_bbox_NuScenes/amotp: 1.7821828244682967
+  pts_bbox_NuScenes/barrier_AP_dist_0.5: 0.0
+  pts_bbox_NuScenes/barrier_AP_dist_1.0: 0.0
+  pts_bbox_NuScenes/barrier_AP_dist_2.0: 0.0
+  pts_bbox_NuScenes/barrier_AP_dist_4.0: 0.0
+  pts_bbox_NuScenes/barrier_attr_err: nan
+  pts_bbox_NuScenes/barrier_orient_err: 1.0
+  pts_bbox_NuScenes/barrier_scale_err: 1.0
+  pts_bbox_NuScenes/barrier_trans_err: 1.0
+  pts_bbox_NuScenes/barrier_vel_err: nan
+  pts_bbox_NuScenes/bicycle_AP_dist_0.5: 0.0
+  pts_bbox_NuScenes/bicycle_AP_dist_1.0: 0.0357
+  pts_bbox_NuScenes/bicycle_AP_dist_2.0: 0.2636
+  pts_bbox_NuScenes/bicycle_AP_dist_4.0: 0.4504
+  pts_bbox_NuScenes/bicycle_attr_err: 1.0
+  pts_bbox_NuScenes/bicycle_orient_err: 0.828
+  pts_bbox_NuScenes/bicycle_scale_err: 0.2905
+  pts_bbox_NuScenes/bicycle_trans_err: 1.0283
+  pts_bbox_NuScenes/bicycle_vel_err: 2.4731
+  pts_bbox_NuScenes/bus_AP_dist_0.5: 0.0
+  pts_bbox_NuScenes/bus_AP_dist_1.0: 0.0
+  pts_bbox_NuScenes/bus_AP_dist_2.0: 0.0
+  pts_bbox_NuScenes/bus_AP_dist_4.0: 0.0
+  pts_bbox_NuScenes/bus_attr_err: 1.0
+  pts_bbox_NuScenes/bus_orient_err: 1.0
+  pts_bbox_NuScenes/bus_scale_err: 1.0
+  pts_bbox_NuScenes/bus_trans_err: 1.0
+  pts_bbox_NuScenes/bus_vel_err: 1.0
+  pts_bbox_NuScenes/car_AP_dist_0.5: 0.0026
+  pts_bbox_NuScenes/car_AP_dist_1.0: 0.1079
+  pts_bbox_NuScenes/car_AP_dist_2.0: 0.4552
+  pts_bbox_NuScenes/car_AP_dist_4.0: 0.6441
+  pts_bbox_NuScenes/car_attr_err: 1.0
+  pts_bbox_NuScenes/car_orient_err: 0.181
+  pts_bbox_NuScenes/car_scale_err: 0.1941
+  pts_bbox_NuScenes/car_trans_err: 0.944
+  pts_bbox_NuScenes/car_vel_err: 2.6115
+  pts_bbox_NuScenes/construction_vehicle_AP_dist_0.5: 0.0
+  pts_bbox_NuScenes/construction_vehicle_AP_dist_1.0: 0.0
+  pts_bbox_NuScenes/construction_vehicle_AP_dist_2.0: 0.0
+  pts_bbox_NuScenes/construction_vehicle_AP_dist_4.0: 0.0
+  pts_bbox_NuScenes/construction_vehicle_attr_err: 1.0
+  pts_bbox_NuScenes/construction_vehicle_orient_err: 1.0
+  pts_bbox_NuScenes/construction_vehicle_scale_err: 1.0
+  pts_bbox_NuScenes/construction_vehicle_trans_err: 1.0
+  pts_bbox_NuScenes/construction_vehicle_vel_err: 1.0
+  pts_bbox_NuScenes/faf: 39.637988170385874
+  pts_bbox_NuScenes/fn: 1780.0
+  pts_bbox_NuScenes/fp: 316.0
+  pts_bbox_NuScenes/frag: 105.0
+  pts_bbox_NuScenes/gt: 874.0
+  pts_bbox_NuScenes/ids: 63.0
+  pts_bbox_NuScenes/lgd: 2.340556569343066
+  pts_bbox_NuScenes/mAAE: 1.0
+  pts_bbox_NuScenes/mAOE: 0.9719
+  pts_bbox_NuScenes/mAP: 0.051408323197158046
+  pts_bbox_NuScenes/mASE: 0.7887
+  pts_bbox_NuScenes/mATE: 1.0188
+  pts_bbox_NuScenes/mAVE: 1.3539
+  pts_bbox_NuScenes/ml: 221.0
+  pts_bbox_NuScenes/mota: 0.12178258468708351
+  pts_bbox_NuScenes/motar: 0.4706277813474215
+  pts_bbox_NuScenes/motorcycle_AP_dist_0.5: 0.0
+  pts_bbox_NuScenes/motorcycle_AP_dist_1.0: 0.0
+  pts_bbox_NuScenes/motorcycle_AP_dist_2.0: 0.0
+  pts_bbox_NuScenes/motorcycle_AP_dist_4.0: 0.0
+  pts_bbox_NuScenes/motorcycle_attr_err: 1.0
+  pts_bbox_NuScenes/motorcycle_orient_err: 1.0
+  pts_bbox_NuScenes/motorcycle_scale_err: 1.0
+  pts_bbox_NuScenes/motorcycle_trans_err: 1.0
+  pts_bbox_NuScenes/motorcycle_vel_err: 1.0
+  pts_bbox_NuScenes/motp: 1.0721037685895969
+  pts_bbox_NuScenes/mt: 81.0
+  pts_bbox_NuScenes/pedestrian_AP_dist_0.5: 0.0
+  pts_bbox_NuScenes/pedestrian_AP_dist_1.0: 0.0
+  pts_bbox_NuScenes/pedestrian_AP_dist_2.0: 0.0203
+  pts_bbox_NuScenes/pedestrian_AP_dist_4.0: 0.0765
+  pts_bbox_NuScenes/pedestrian_attr_err: 1.0
+  pts_bbox_NuScenes/pedestrian_orient_err: 1.7379
+  pts_bbox_NuScenes/pedestrian_scale_err: 0.4019
+  pts_bbox_NuScenes/pedestrian_trans_err: 1.2153
+  pts_bbox_NuScenes/pedestrian_vel_err: 0.7469
+  pts_bbox_NuScenes/recall: 0.2409339936569613
+  pts_bbox_NuScenes/tid: 0.5628294809407949
+  pts_bbox_NuScenes/tp: 779.0
+  pts_bbox_NuScenes/traffic_cone_AP_dist_0.5: 0.0
+  pts_bbox_NuScenes/traffic_cone_AP_dist_1.0: 0.0
+  pts_bbox_NuScenes/traffic_cone_AP_dist_2.0: 0.0
+  pts_bbox_NuScenes/traffic_cone_AP_dist_4.0: 0.0
+  pts_bbox_NuScenes/traffic_cone_attr_err: nan
+  pts_bbox_NuScenes/traffic_cone_orient_err: nan
+  pts_bbox_NuScenes/traffic_cone_scale_err: 1.0
+  pts_bbox_NuScenes/traffic_cone_trans_err: 1.0
+  pts_bbox_NuScenes/traffic_cone_vel_err: nan
+  pts_bbox_NuScenes/trailer_AP_dist_0.5: 0.0
+  pts_bbox_NuScenes/trailer_AP_dist_1.0: 0.0
+  pts_bbox_NuScenes/trailer_AP_dist_2.0: 0.0
+  pts_bbox_NuScenes/trailer_AP_dist_4.0: 0.0
+  pts_bbox_NuScenes/trailer_attr_err: 1.0
+  pts_bbox_NuScenes/trailer_orient_err: 1.0
+  pts_bbox_NuScenes/trailer_scale_err: 1.0
+  pts_bbox_NuScenes/trailer_trans_err: 1.0
+  pts_bbox_NuScenes/trailer_vel_err: 1.0
+  pts_bbox_NuScenes/truck_AP_dist_0.5: 0.0
+  pts_bbox_NuScenes/truck_AP_dist_1.0: 0.0
+  pts_bbox_NuScenes/truck_AP_dist_2.0: 0.0
+  pts_bbox_NuScenes/truck_AP_dist_4.0: 0.0
+  pts_bbox_NuScenes/truck_attr_err: 1.0
+  pts_bbox_NuScenes/truck_orient_err: 1.0
+  pts_bbox_NuScenes/truck_scale_err: 1.0
+  pts_bbox_NuScenes/truck_trans_err: 1.0
+  pts_bbox_NuScenes/truck_vel_err: 1.0
+
+--- Other ---
+  contour_iou: 0.5141813158988953
+  crossing_iou: 0.5364112854003906
+  divider_iou: nan
+  drivable_iou: 0.8400051593780518
+  lanes_iou: 0.5275188684463501
+
+----------------------------------------------------------------------
+关键指标摘要:
+  pts_bbox_NuScenes/mAP: 0.051408
+  pts_bbox_NuScenes/NDS: 0.049651
+  pts_bbox_NuScenes/mATE: 1.018800
+  pts_bbox_NuScenes/mASE: 0.788700
+  pts_bbox_NuScenes/mAOE: 0.971900
+  pts_bbox_NuScenes/mAVE: 1.353900
+  pts_bbox_NuScenes/mAAE: 1.000000
+
+======================================================================
+[INFO] 评估完成。日志: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/logs_eval_inf_track_prune_backbone_byclaude.py/eval_20260326_213834.log
+[INFO] 评估任务: ['det', 'track', 'map']
+[INFO] 剪枝后参数量: 93.83 M （原始 98.29 M，保留 95.46%）
+======================================================================

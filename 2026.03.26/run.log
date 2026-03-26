@@ -1,0 +1,924 @@
+[INFO] run log: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/logs/20260326_150910_452188/run.log
+[INFO] run timestamp: 20260326_150910_452188
+[INFO] output root dir: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out
+[INFO] run output dir: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188
+[INFO] config: ./projects/configs_e2e_univ2x/univ2x_sub_inf_e2e_track.py
+[INFO] checkpoint: ./ckpts/univ2x_sub_inf_stg1.pth
+[INFO] subset modes: calib=skip_warmup, score=skip_warmup
+[PATCH] torchprofile Variable.dtype setter patched
+[PATCH] NuScenesEval_custom patched for subset evaluation
+[PATCH] TrackingEval_custom patched for subset evaluation
+[INFO] import plugin module: projects.mmdet3d_plugin
+[INFO] device: cuda:2
+[INFO] build full model + load checkpoint...
+load checkpoint from local path: ./ckpts/univ2x_sub_inf_stg1.pth
+The model and loaded state dict do not match exactly
+
+unexpected key in source state_dict: model_ego_agent.linear1.weight, model_ego_agent.linear1.bias, model_ego_agent.linear2.weight, model_ego_agent.linear2.bias, model_ego_agent.linear_feat1.weight, model_ego_agent.linear_feat1.bias, model_ego_agent.linear_feat2.weight, model_ego_agent.linear_feat2.bias, model_ego_agent.norm_feat.weight, model_ego_agent.norm_feat.bias, model_ego_agent.norm1.weight, model_ego_agent.norm1.bias, model_ego_agent.norm2.weight, model_ego_agent.norm2.bias, model_ego_agent.self_attn.in_proj_weight, model_ego_agent.self_attn.in_proj_bias, model_ego_agent.self_attn.out_proj.weight, model_ego_agent.self_attn.out_proj.bias, model_ego_agent.img_backbone.layer3.0.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.0.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.1.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.1.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.2.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.2.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.3.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.3.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.4.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.4.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.5.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.5.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.6.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.6.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.7.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.7.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.8.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.8.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.9.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.9.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.10.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.10.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.11.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.11.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.12.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.12.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.13.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.13.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.14.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.14.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.15.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.15.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.16.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.16.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.17.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.17.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.18.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.18.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.19.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.19.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.20.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.20.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.21.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.21.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.22.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.22.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer4.0.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer4.0.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer4.1.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer4.1.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer4.2.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer4.2.conv2.conv_offset.bias
+
+[INFO] full model params before pruning: 98.285 M
+[INFO] backbone params before pruning: 42.500 M
+[INFO] deep copying backbone for pruning (prevents reference aliasing)...
+[INFO] saved BN stats from 104 original BN layers
+[INFO] build calib loader ...
+======
+Loading NuScenes tables for version v1.0-trainval...
+4 category,
+0 attribute,
+4 visibility,
+2324 instance,
+4 sensor,
+2 calibrated_sensor,
+2196 ego_pose,
+6 log,
+67 scene,
+2196 sample,
+2196 sample_data,
+38859 sample_annotation,
+6 map,
+Done loading in 0.628 seconds.
+======
+Reverse indexing ...
+Done reverse indexing in 0.1 seconds.
+======
+[INFO] subset sampling mode=skip_warmup, start_idx=4, covered scenes=45/46, total=442
+       per-scene frames: min=4 max=10 avg=9.8
+[INFO] split=train subset_mode=skip_warmup, frames_per_scene=10, subset size=442
+WARNING!!!!, Only can be used for obtain inference speed!!!!
+[INFO] calib dataset size: 442
+[INFO] build score loader ...
+======
+Loading NuScenes tables for version v1.0-trainval...
+4 category,
+0 attribute,
+4 visibility,
+2324 instance,
+4 sensor,
+2 calibrated_sensor,
+2196 ego_pose,
+6 log,
+67 scene,
+2196 sample,
+2196 sample_data,
+38859 sample_annotation,
+6 map,
+Done loading in 0.219 seconds.
+======
+Reverse indexing ...
+Done reverse indexing in 0.1 seconds.
+======
+[INFO] subset sampling mode=skip_warmup, start_idx=4, covered scenes=21/21, total=196
+       per-scene frames: min=3 max=10 avg=9.3
+[INFO] split=val subset_mode=skip_warmup, frames_per_scene=10, subset size=196
+WARNING!!!!, Only can be used for obtain inference speed!!!!
+[INFO] score dataset size: 196, eval_mod=['det']
+[INFO] build full-val baseline loader ...
+======
+Loading NuScenes tables for version v1.0-trainval...
+4 category,
+0 attribute,
+4 visibility,
+2324 instance,
+4 sensor,
+2 calibrated_sensor,
+2196 ego_pose,
+6 log,
+67 scene,
+2196 sample,
+2196 sample_data,
+38859 sample_annotation,
+6 map,
+Done loading in 0.242 seconds.
+======
+Reverse indexing ...
+Done reverse indexing in 0.1 seconds.
+======
+[INFO] split=val subset_mode=full, size=675
+WARNING!!!!, Only can be used for obtain inference speed!!!!
+Start to convert detection format...
+Results writes to /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc.json
+Start to convert detection format...
+Results writes to /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc_det.json
+Initializing nuScenes detection evaluation
+Loaded results from /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc_det.json. Found detections for 675 samples.
+Loading annotations for val split from nuScenes version: v1.0-trainval
+
+  0%|                                                                                                                                                                                                     | 0/675 [00:00<?, ?it/s]
+ 36%|██████████████████████████████████████████████████████████████████▊                                                                                                                      | 244/675 [00:00<00:00, 2438.87it/s]
+ 72%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                   | 488/675 [00:00<00:00, 1487.19it/s]
+ 97%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎    | 658/675 [00:00<00:00, 1313.68it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 675/675 [00:00<00:00, 1389.44it/s]
+Loaded ground truth annotations for 675 samples.
+Filtering predictions
+=> Original number of boxes: 197801
+=> After distance based filtering: 197797
+=> After LIDAR and RADAR points based filtering: 197797
+=> After bike rack filtering: 197797
+Filtering ground truth annotations
+=> Original number of boxes: 12803
+=> After distance based filtering: 9666
+=> After LIDAR and RADAR points based filtering: 9666
+=> After bike rack filtering: 9666
+Accumulating metric data...
+Calculating metrics...
+Saving metrics to: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/det
+mAP: 0.0748
+mATE: 0.9829
+mASE: 0.7762
+mAOE: 0.8770
+mAVE: 0.9910
+mAAE: 1.0000
+NDS: 0.0747
+Eval time: 15.0s
+
+Per-class results:
+Object Class        	AP    	ATE   	ASE   	AOE   	AVE   	AAE   
+car                 	0.406 	0.822 	0.160 	0.135 	0.895 	1.000 
+truck               	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+bus                 	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+trailer             	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+construction_vehicle	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+pedestrian          	0.070 	1.082 	0.351 	1.101 	0.793 	1.000 
+motorcycle          	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+bicycle             	0.272 	0.925 	0.251 	0.657 	1.240 	1.000 
+traffic_cone        	0.000 	1.000 	1.000 	nan   	nan   	nan   
+barrier             	0.000 	1.000 	1.000 	1.000 	nan   	nan   
+[INFO] baseline full-model mAP on full val: 0.074757
+[INFO] baseline full-val mAP: 0.074757
+[INFO] baseline full-val car AP: 0.405675
+[INFO] baseline full-val pedestrian AP: 0.069650
+[INFO] baseline full-val bicycle AP: 0.272225
+Start to convert detection format...
+Results writes to /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc.json
+Start to convert detection format...
+Results writes to /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc_det.json
+Initializing nuScenes detection evaluation
+Loaded results from /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc_det.json. Found detections for 196 samples.
+Loading annotations for val split from nuScenes version: v1.0-trainval
+
+  0%|                                                                                                                                                                                                     | 0/675 [00:00<?, ?it/s]
+ 33%|█████████████████████████████████████████████████████████████▋                                                                                                                           | 225/675 [00:00<00:00, 2249.69it/s]
+ 67%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                             | 450/675 [00:00<00:00, 1500.29it/s]
+ 91%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                | 615/675 [00:00<00:00, 1327.88it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 675/675 [00:00<00:00, 1320.35it/s]
+Loaded ground truth annotations for 675 samples.
+[PATCH] NuScenesEval subset mode: GT filtered to 196 pred tokens
+=> Original number of boxes: 57482
+=> After distance based filtering: 57481
+=> After LIDAR and RADAR points based filtering: 57481
+=> After bike rack filtering: 57481
+=> Original number of boxes: 3477
+=> After distance based filtering: 2622
+=> After LIDAR and RADAR points based filtering: 2622
+=> After bike rack filtering: 2622
+Accumulating metric data...
+Calculating metrics...
+Saving metrics to: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/det
+mAP: 0.0739
+mATE: 0.9895
+mASE: 0.7779
+mAOE: 0.9117
+mAVE: 1.0658
+mAAE: 1.0000
+NDS: 0.0691
+Eval time: 4.1s
+
+Per-class results:
+Object Class        	AP    	ATE   	ASE   	AOE   	AVE   	AAE   
+car                 	0.406 	0.824 	0.165 	0.134 	1.078 	1.000 
+truck               	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+bus                 	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+trailer             	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+construction_vehicle	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+pedestrian          	0.061 	1.120 	0.371 	1.339 	0.936 	1.000 
+motorcycle          	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+bicycle             	0.273 	0.951 	0.242 	0.733 	1.512 	1.000 
+traffic_cone        	0.000 	1.000 	1.000 	nan   	nan   	nan   
+barrier             	0.000 	1.000 	1.000 	1.000 	nan   	nan   
+[INFO] baseline full-model mAP on score split: 0.073935
+[INFO] baseline score-split mAP: 0.073935
+[INFO] baseline score-split car AP: 0.405650
+[INFO] baseline score-split pedestrian AP: 0.060525
+[INFO] baseline score-split bicycle AP: 0.273175
+[INFO] baseline eval key pts_bbox_NuScenes/mAP=0.07393513991824259
+[INFO] build backbone dummy_input ...
+[INFO] dummy_input shape: (1, 3, 1088, 1920)
+[INFO] min_channel_ratio=0.5: raised channel_divisor for 104 conv layers
+[INFO] lock_stage_outputs: locked 37 stage-output conv layers
+  backbone.layer1.0.conv3: locked at 256 channels
+  backbone.layer1.0.downsample.0: locked at 256 channels
+  backbone.layer1.1.conv3: locked at 256 channels
+  backbone.layer1.2.conv3: locked at 256 channels
+  backbone.layer2.0.conv3: locked at 512 channels
+  backbone.layer2.0.downsample.0: locked at 512 channels
+  backbone.layer2.1.conv3: locked at 512 channels
+  backbone.layer2.2.conv3: locked at 512 channels
+  backbone.layer2.3.conv3: locked at 512 channels
+  backbone.layer3.0.conv3: locked at 1024 channels
+  backbone.layer3.0.downsample.0: locked at 1024 channels
+  backbone.layer3.1.conv3: locked at 1024 channels
+  backbone.layer3.10.conv3: locked at 1024 channels
+  backbone.layer3.11.conv3: locked at 1024 channels
+  backbone.layer3.12.conv3: locked at 1024 channels
+  backbone.layer3.13.conv3: locked at 1024 channels
+  backbone.layer3.14.conv3: locked at 1024 channels
+  backbone.layer3.15.conv3: locked at 1024 channels
+  backbone.layer3.16.conv3: locked at 1024 channels
+  backbone.layer3.17.conv3: locked at 1024 channels
+  backbone.layer3.18.conv3: locked at 1024 channels
+  backbone.layer3.19.conv3: locked at 1024 channels
+  backbone.layer3.2.conv3: locked at 1024 channels
+  backbone.layer3.20.conv3: locked at 1024 channels
+  backbone.layer3.21.conv3: locked at 1024 channels
+  backbone.layer3.22.conv3: locked at 1024 channels
+  backbone.layer3.3.conv3: locked at 1024 channels
+  backbone.layer3.4.conv3: locked at 1024 channels
+  backbone.layer3.5.conv3: locked at 1024 channels
+  backbone.layer3.6.conv3: locked at 1024 channels
+  backbone.layer3.7.conv3: locked at 1024 channels
+  backbone.layer3.8.conv3: locked at 1024 channels
+  backbone.layer3.9.conv3: locked at 1024 channels
+  backbone.layer4.0.conv3: locked at 2048 channels
+  backbone.layer4.0.downsample.0: locked at 2048 channels
+  backbone.layer4.1.conv3: locked at 2048 channels
+  backbone.layer4.2.conv3: locked at 2048 channels
+[INFO] constraints: {'params': '95%'}
+[INFO] prune target: backbone only
+[INFO] max_iter_data_loader: 50
+[INFO] search checkpoint: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/fastnas_search_ckpt_20260326_150910_452188.pth
+
+Profiling the following subnets from the given model: ('min', 'centroid', 'max').
+--------------------------------------------------------------------------------
+[3m                                                                             [0m
+[3m                              Profiling Results                              [0m
+┏━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃[1m [0m[1mConstraint  [0m[1m [0m┃[1m [0m[1mmin         [0m[1m [0m┃[1m [0m[1mcentroid    [0m[1m [0m┃[1m [0m[1mmax         [0m[1m [0m┃[1m [0m[1mmax/min ratio[0m[1m [0m┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ flops        │ 202.78G      │ 202.78G      │ 315.08G      │ 1.55          │
+│ params       │ 27.33M       │ 27.33M       │ 42.39M       │ 1.55          │
+└──────────────┴──────────────┴──────────────┴──────────────┴───────────────┘
+[3m                                              [0m
+[3m            Constraints Evaluation            [0m
+┏━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃[1m              [0m┃[1m              [0m┃[1m [0m[1mSatisfiable [0m[1m [0m┃
+┃[1m [0m[1mConstraint  [0m[1m [0m┃[1m [0m[1mUpper Bound [0m[1m [0m┃[1m [0m[1mUpper Bound [0m[1m [0m┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+│ params       │ 40.28M       │ True         │
+└──────────────┴──────────────┴──────────────┘
+
+
+Search Space Summary:
+----------------------------------------------------------------------------------------------------
+  backbone.conv1.out_channels                                                      [64]
+  backbone.conv1.in_channels                                                       [3]
+  backbone.bn1.num_features                                                        [64]
+  backbone.layer1.depth                                                            [3]
+* backbone.layer1.0.conv1.out_channels                                             [32, 64]
+  backbone.layer1.0.conv1.in_channels                                              [64]
+  backbone.layer1.0.bn1.num_features                                               [32, 64]
+  backbone.layer1.0.conv2.out_channels                                             [64]
+  backbone.layer1.0.conv2.in_channels                                              [32, 64]
+  backbone.layer1.0.bn2.num_features                                               [64]
+  backbone.layer1.0.conv3.out_channels                                             [256]
+  backbone.layer1.0.conv3.in_channels                                              [64]
+  backbone.layer1.0.bn3.num_features                                               [256]
+  backbone.layer1.0.downsample.0.out_channels                                      [256]
+  backbone.layer1.0.downsample.0.in_channels                                       [64]
+  backbone.layer1.0.downsample.1.num_features                                      [256]
+* backbone.layer1.1.conv1.out_channels                                             [32, 64]
+  backbone.layer1.1.conv1.in_channels                                              [256]
+  backbone.layer1.1.bn1.num_features                                               [32, 64]
+  backbone.layer1.1.conv2.out_channels                                             [64]
+  backbone.layer1.1.conv2.in_channels                                              [32, 64]
+  backbone.layer1.1.bn2.num_features                                               [64]
+  backbone.layer1.1.conv3.out_channels                                             [256]
+  backbone.layer1.1.conv3.in_channels                                              [64]
+  backbone.layer1.1.bn3.num_features                                               [256]
+* backbone.layer1.2.conv1.out_channels                                             [32, 64]
+  backbone.layer1.2.conv1.in_channels                                              [256]
+  backbone.layer1.2.bn1.num_features                                               [32, 64]
+  backbone.layer1.2.conv2.out_channels                                             [64]
+  backbone.layer1.2.conv2.in_channels                                              [32, 64]
+  backbone.layer1.2.bn2.num_features                                               [64]
+  backbone.layer1.2.conv3.out_channels                                             [256]
+  backbone.layer1.2.conv3.in_channels                                              [64]
+  backbone.layer1.2.bn3.num_features                                               [256]
+  backbone.layer2.depth                                                            [4]
+* backbone.layer2.0.conv1.out_channels                                             [64, 128]
+  backbone.layer2.0.conv1.in_channels                                              [256]
+  backbone.layer2.0.bn1.num_features                                               [64, 128]
+  backbone.layer2.0.conv2.out_channels                                             [128]
+  backbone.layer2.0.conv2.in_channels                                              [64, 128]
+  backbone.layer2.0.bn2.num_features                                               [128]
+  backbone.layer2.0.conv3.out_channels                                             [512]
+  backbone.layer2.0.conv3.in_channels                                              [128]
+  backbone.layer2.0.downsample.0.out_channels                                      [512]
+  backbone.layer2.0.downsample.0.in_channels                                       [256]
+* backbone.layer2.1.conv1.out_channels                                             [64, 128]
+  backbone.layer2.1.conv1.in_channels                                              [512]
+  backbone.layer2.1.bn1.num_features                                               [64, 128]
+  backbone.layer2.1.conv2.out_channels                                             [128]
+  backbone.layer2.1.conv2.in_channels                                              [64, 128]
+  backbone.layer2.1.bn2.num_features                                               [128]
+  backbone.layer2.1.conv3.out_channels                                             [512]
+  backbone.layer2.1.conv3.in_channels                                              [128]
+* backbone.layer2.2.conv1.out_channels                                             [64, 128]
+  backbone.layer2.2.conv1.in_channels                                              [512]
+  backbone.layer2.2.bn1.num_features                                               [64, 128]
+  backbone.layer2.2.conv2.out_channels                                             [128]
+  backbone.layer2.2.conv2.in_channels                                              [64, 128]
+  backbone.layer2.2.bn2.num_features                                               [128]
+  backbone.layer2.2.conv3.out_channels                                             [512]
+  backbone.layer2.2.conv3.in_channels                                              [128]
+* backbone.layer2.3.conv1.out_channels                                             [64, 128]
+  backbone.layer2.3.conv1.in_channels                                              [512]
+  backbone.layer2.3.bn1.num_features                                               [64, 128]
+  backbone.layer2.3.conv2.out_channels                                             [128]
+  backbone.layer2.3.conv2.in_channels                                              [64, 128]
+  backbone.layer2.3.bn2.num_features                                               [128]
+  backbone.layer2.3.conv3.out_channels                                             [512]
+  backbone.layer2.3.conv3.in_channels                                              [128]
+  backbone.layer3.depth                                                            [23]
+* backbone.layer3.0.conv1.out_channels                                             [128, 256]
+  backbone.layer3.0.conv1.in_channels                                              [512]
+  backbone.layer3.0.bn1.num_features                                               [128, 256]
+  backbone.layer3.0.conv2.out_channels                                             [256]
+  backbone.layer3.0.conv2.in_channels                                              [128, 256]
+  backbone.layer3.0.bn2.num_features                                               [256]
+  backbone.layer3.0.conv3.out_channels                                             [1024]
+  backbone.layer3.0.conv3.in_channels                                              [256]
+  backbone.layer3.0.downsample.0.out_channels                                      [1024]
+  backbone.layer3.0.downsample.0.in_channels                                       [512]
+* backbone.layer3.1.conv1.out_channels                                             [128, 256]
+  backbone.layer3.1.conv1.in_channels                                              [1024]
+  backbone.layer3.1.bn1.num_features                                               [128, 256]
+  backbone.layer3.1.conv2.out_channels                                             [256]
+  backbone.layer3.1.conv2.in_channels                                              [128, 256]
+  backbone.layer3.1.bn2.num_features                                               [256]
+  backbone.layer3.1.conv3.out_channels                                             [1024]
+  backbone.layer3.1.conv3.in_channels                                              [256]
+* backbone.layer3.2.conv1.out_channels                                             [128, 256]
+  backbone.layer3.2.conv1.in_channels                                              [1024]
+  backbone.layer3.2.bn1.num_features                                               [128, 256]
+  backbone.layer3.2.conv2.out_channels                                             [256]
+  backbone.layer3.2.conv2.in_channels                                              [128, 256]
+  backbone.layer3.2.bn2.num_features                                               [256]
+  backbone.layer3.2.conv3.out_channels                                             [1024]
+  backbone.layer3.2.conv3.in_channels                                              [256]
+* backbone.layer3.3.conv1.out_channels                                             [128, 256]
+  backbone.layer3.3.conv1.in_channels                                              [1024]
+  backbone.layer3.3.bn1.num_features                                               [128, 256]
+  backbone.layer3.3.conv2.out_channels                                             [256]
+  backbone.layer3.3.conv2.in_channels                                              [128, 256]
+  backbone.layer3.3.bn2.num_features                                               [256]
+  backbone.layer3.3.conv3.out_channels                                             [1024]
+  backbone.layer3.3.conv3.in_channels                                              [256]
+* backbone.layer3.4.conv1.out_channels                                             [128, 256]
+  backbone.layer3.4.conv1.in_channels                                              [1024]
+  backbone.layer3.4.bn1.num_features                                               [128, 256]
+  backbone.layer3.4.conv2.out_channels                                             [256]
+  backbone.layer3.4.conv2.in_channels                                              [128, 256]
+  backbone.layer3.4.bn2.num_features                                               [256]
+  backbone.layer3.4.conv3.out_channels                                             [1024]
+  backbone.layer3.4.conv3.in_channels                                              [256]
+* backbone.layer3.5.conv1.out_channels                                             [128, 256]
+  backbone.layer3.5.conv1.in_channels                                              [1024]
+  backbone.layer3.5.bn1.num_features                                               [128, 256]
+  backbone.layer3.5.conv2.out_channels                                             [256]
+  backbone.layer3.5.conv2.in_channels                                              [128, 256]
+  backbone.layer3.5.bn2.num_features                                               [256]
+  backbone.layer3.5.conv3.out_channels                                             [1024]
+  backbone.layer3.5.conv3.in_channels                                              [256]
+* backbone.layer3.6.conv1.out_channels                                             [128, 256]
+  backbone.layer3.6.conv1.in_channels                                              [1024]
+  backbone.layer3.6.bn1.num_features                                               [128, 256]
+  backbone.layer3.6.conv2.out_channels                                             [256]
+  backbone.layer3.6.conv2.in_channels                                              [128, 256]
+  backbone.layer3.6.bn2.num_features                                               [256]
+  backbone.layer3.6.conv3.out_channels                                             [1024]
+  backbone.layer3.6.conv3.in_channels                                              [256]
+* backbone.layer3.7.conv1.out_channels                                             [128, 256]
+  backbone.layer3.7.conv1.in_channels                                              [1024]
+  backbone.layer3.7.bn1.num_features                                               [128, 256]
+  backbone.layer3.7.conv2.out_channels                                             [256]
+  backbone.layer3.7.conv2.in_channels                                              [128, 256]
+  backbone.layer3.7.bn2.num_features                                               [256]
+  backbone.layer3.7.conv3.out_channels                                             [1024]
+  backbone.layer3.7.conv3.in_channels                                              [256]
+* backbone.layer3.8.conv1.out_channels                                             [128, 256]
+  backbone.layer3.8.conv1.in_channels                                              [1024]
+  backbone.layer3.8.bn1.num_features                                               [128, 256]
+  backbone.layer3.8.conv2.out_channels                                             [256]
+  backbone.layer3.8.conv2.in_channels                                              [128, 256]
+  backbone.layer3.8.bn2.num_features                                               [256]
+  backbone.layer3.8.conv3.out_channels                                             [1024]
+  backbone.layer3.8.conv3.in_channels                                              [256]
+* backbone.layer3.9.conv1.out_channels                                             [128, 256]
+  backbone.layer3.9.conv1.in_channels                                              [1024]
+  backbone.layer3.9.bn1.num_features                                               [128, 256]
+  backbone.layer3.9.conv2.out_channels                                             [256]
+  backbone.layer3.9.conv2.in_channels                                              [128, 256]
+  backbone.layer3.9.bn2.num_features                                               [256]
+  backbone.layer3.9.conv3.out_channels                                             [1024]
+  backbone.layer3.9.conv3.in_channels                                              [256]
+* backbone.layer3.10.conv1.out_channels                                            [128, 256]
+  backbone.layer3.10.conv1.in_channels                                             [1024]
+  backbone.layer3.10.bn1.num_features                                              [128, 256]
+  backbone.layer3.10.conv2.out_channels                                            [256]
+  backbone.layer3.10.conv2.in_channels                                             [128, 256]
+  backbone.layer3.10.bn2.num_features                                              [256]
+  backbone.layer3.10.conv3.out_channels                                            [1024]
+  backbone.layer3.10.conv3.in_channels                                             [256]
+* backbone.layer3.11.conv1.out_channels                                            [128, 256]
+  backbone.layer3.11.conv1.in_channels                                             [1024]
+  backbone.layer3.11.bn1.num_features                                              [128, 256]
+  backbone.layer3.11.conv2.out_channels                                            [256]
+  backbone.layer3.11.conv2.in_channels                                             [128, 256]
+  backbone.layer3.11.bn2.num_features                                              [256]
+  backbone.layer3.11.conv3.out_channels                                            [1024]
+  backbone.layer3.11.conv3.in_channels                                             [256]
+* backbone.layer3.12.conv1.out_channels                                            [128, 256]
+  backbone.layer3.12.conv1.in_channels                                             [1024]
+  backbone.layer3.12.bn1.num_features                                              [128, 256]
+  backbone.layer3.12.conv2.out_channels                                            [256]
+  backbone.layer3.12.conv2.in_channels                                             [128, 256]
+  backbone.layer3.12.bn2.num_features                                              [256]
+  backbone.layer3.12.conv3.out_channels                                            [1024]
+  backbone.layer3.12.conv3.in_channels                                             [256]
+* backbone.layer3.13.conv1.out_channels                                            [128, 256]
+  backbone.layer3.13.conv1.in_channels                                             [1024]
+  backbone.layer3.13.bn1.num_features                                              [128, 256]
+  backbone.layer3.13.conv2.out_channels                                            [256]
+  backbone.layer3.13.conv2.in_channels                                             [128, 256]
+  backbone.layer3.13.bn2.num_features                                              [256]
+  backbone.layer3.13.conv3.out_channels                                            [1024]
+  backbone.layer3.13.conv3.in_channels                                             [256]
+* backbone.layer3.14.conv1.out_channels                                            [128, 256]
+  backbone.layer3.14.conv1.in_channels                                             [1024]
+  backbone.layer3.14.bn1.num_features                                              [128, 256]
+  backbone.layer3.14.conv2.out_channels                                            [256]
+  backbone.layer3.14.conv2.in_channels                                             [128, 256]
+  backbone.layer3.14.bn2.num_features                                              [256]
+  backbone.layer3.14.conv3.out_channels                                            [1024]
+  backbone.layer3.14.conv3.in_channels                                             [256]
+* backbone.layer3.15.conv1.out_channels                                            [128, 256]
+  backbone.layer3.15.conv1.in_channels                                             [1024]
+  backbone.layer3.15.bn1.num_features                                              [128, 256]
+  backbone.layer3.15.conv2.out_channels                                            [256]
+  backbone.layer3.15.conv2.in_channels                                             [128, 256]
+  backbone.layer3.15.bn2.num_features                                              [256]
+  backbone.layer3.15.conv3.out_channels                                            [1024]
+  backbone.layer3.15.conv3.in_channels                                             [256]
+* backbone.layer3.16.conv1.out_channels                                            [128, 256]
+  backbone.layer3.16.conv1.in_channels                                             [1024]
+  backbone.layer3.16.bn1.num_features                                              [128, 256]
+  backbone.layer3.16.conv2.out_channels                                            [256]
+  backbone.layer3.16.conv2.in_channels                                             [128, 256]
+  backbone.layer3.16.bn2.num_features                                              [256]
+  backbone.layer3.16.conv3.out_channels                                            [1024]
+  backbone.layer3.16.conv3.in_channels                                             [256]
+* backbone.layer3.17.conv1.out_channels                                            [128, 256]
+  backbone.layer3.17.conv1.in_channels                                             [1024]
+  backbone.layer3.17.bn1.num_features                                              [128, 256]
+  backbone.layer3.17.conv2.out_channels                                            [256]
+  backbone.layer3.17.conv2.in_channels                                             [128, 256]
+  backbone.layer3.17.bn2.num_features                                              [256]
+  backbone.layer3.17.conv3.out_channels                                            [1024]
+  backbone.layer3.17.conv3.in_channels                                             [256]
+* backbone.layer3.18.conv1.out_channels                                            [128, 256]
+  backbone.layer3.18.conv1.in_channels                                             [1024]
+  backbone.layer3.18.bn1.num_features                                              [128, 256]
+  backbone.layer3.18.conv2.out_channels                                            [256]
+  backbone.layer3.18.conv2.in_channels                                             [128, 256]
+  backbone.layer3.18.bn2.num_features                                              [256]
+  backbone.layer3.18.conv3.out_channels                                            [1024]
+  backbone.layer3.18.conv3.in_channels                                             [256]
+* backbone.layer3.19.conv1.out_channels                                            [128, 256]
+  backbone.layer3.19.conv1.in_channels                                             [1024]
+  backbone.layer3.19.bn1.num_features                                              [128, 256]
+  backbone.layer3.19.conv2.out_channels                                            [256]
+  backbone.layer3.19.conv2.in_channels                                             [128, 256]
+  backbone.layer3.19.bn2.num_features                                              [256]
+  backbone.layer3.19.conv3.out_channels                                            [1024]
+  backbone.layer3.19.conv3.in_channels                                             [256]
+* backbone.layer3.20.conv1.out_channels                                            [128, 256]
+  backbone.layer3.20.conv1.in_channels                                             [1024]
+  backbone.layer3.20.bn1.num_features                                              [128, 256]
+  backbone.layer3.20.conv2.out_channels                                            [256]
+  backbone.layer3.20.conv2.in_channels                                             [128, 256]
+  backbone.layer3.20.bn2.num_features                                              [256]
+  backbone.layer3.20.conv3.out_channels                                            [1024]
+  backbone.layer3.20.conv3.in_channels                                             [256]
+* backbone.layer3.21.conv1.out_channels                                            [128, 256]
+  backbone.layer3.21.conv1.in_channels                                             [1024]
+  backbone.layer3.21.bn1.num_features                                              [128, 256]
+  backbone.layer3.21.conv2.out_channels                                            [256]
+  backbone.layer3.21.conv2.in_channels                                             [128, 256]
+  backbone.layer3.21.bn2.num_features                                              [256]
+  backbone.layer3.21.conv3.out_channels                                            [1024]
+  backbone.layer3.21.conv3.in_channels                                             [256]
+* backbone.layer3.22.conv1.out_channels                                            [128, 256]
+  backbone.layer3.22.conv1.in_channels                                             [1024]
+  backbone.layer3.22.bn1.num_features                                              [128, 256]
+  backbone.layer3.22.conv2.out_channels                                            [256]
+  backbone.layer3.22.conv2.in_channels                                             [128, 256]
+  backbone.layer3.22.bn2.num_features                                              [256]
+  backbone.layer3.22.conv3.out_channels                                            [1024]
+  backbone.layer3.22.conv3.in_channels                                             [256]
+  backbone.layer4.depth                                                            [3]
+* backbone.layer4.0.conv1.out_channels                                             [256, 512]
+  backbone.layer4.0.conv1.in_channels                                              [1024]
+  backbone.layer4.0.bn1.num_features                                               [256, 512]
+  backbone.layer4.0.conv2.out_channels                                             [512]
+  backbone.layer4.0.conv2.in_channels                                              [256, 512]
+  backbone.layer4.0.bn2.num_features                                               [512]
+  backbone.layer4.0.conv3.out_channels                                             [2048]
+  backbone.layer4.0.conv3.in_channels                                              [512]
+  backbone.layer4.0.downsample.0.out_channels                                      [2048]
+  backbone.layer4.0.downsample.0.in_channels                                       [1024]
+* backbone.layer4.1.conv1.out_channels                                             [256, 512]
+  backbone.layer4.1.conv1.in_channels                                              [2048]
+  backbone.layer4.1.bn1.num_features                                               [256, 512]
+  backbone.layer4.1.conv2.out_channels                                             [512]
+  backbone.layer4.1.conv2.in_channels                                              [256, 512]
+  backbone.layer4.1.bn2.num_features                                               [512]
+  backbone.layer4.1.conv3.out_channels                                             [2048]
+  backbone.layer4.1.conv3.in_channels                                              [512]
+* backbone.layer4.2.conv1.out_channels                                             [256, 512]
+  backbone.layer4.2.conv1.in_channels                                              [2048]
+  backbone.layer4.2.bn1.num_features                                               [256, 512]
+  backbone.layer4.2.conv2.out_channels                                             [512]
+  backbone.layer4.2.conv2.in_channels                                              [256, 512]
+  backbone.layer4.2.bn2.num_features                                               [512]
+  backbone.layer4.2.conv3.out_channels                                             [2048]
+  backbone.layer4.2.conv3.in_channels                                              [512]
+----------------------------------------------------------------------------------------------------
+Number of configurable hparams: 33
+Total size of the search space: 8.59e+09
+Note: all constraints can be satisfied within the search space!
+
+
+Beginning pre-search estimation. If the runtime of score function is longer than a few minutes, consider subsampling the dataset used in score function. 
+A PyTorch dataset can be subsampled using torch.utils.data.Subset (https://pytorch.org/docs/stable/data.html#torch.utils.data.Subset) as following:
+ subset_dataset = torch.utils.data.Subset(dataset, indices)
+
+Collecting pre-search statistics:   0%|                                                                                                                                                                    | 0/66 [00:00<?, ?it/s]
+Collecting pre-search statistics:   0%|                                                                                                             | 0/66 [02:14<?, ?it/s, cur=backbone.layer1.0.conv1.out_channels(32/64): 0.01]
+Collecting pre-search statistics:   2%|█▍                                                                                                | 1/66 [02:14<2:25:58, 134.75s/it, cur=backbone.layer1.0.conv1.out_channels(32/64): 0.01]
+Collecting pre-search statistics:   2%|█▍                                                                                                | 1/66 [02:14<2:25:58, 134.75s/it, cur=backbone.layer1.0.conv1.out_channels(64/64): 0.00]
+Collecting pre-search statistics:   3%|██▉                                                                                               | 2/66 [04:16<2:23:43, 134.75s/it, cur=backbone.layer1.1.conv1.out_channels(32/64): 0.00]
+Collecting pre-search statistics:   5%|████▌                                                                                              | 3/66 [04:16<1:27:50, 83.65s/it, cur=backbone.layer1.1.conv1.out_channels(32/64): 0.00]
+Collecting pre-search statistics:   5%|████▌                                                                                              | 3/66 [04:16<1:27:50, 83.65s/it, cur=backbone.layer1.1.conv1.out_channels(64/64): 0.00]
+Collecting pre-search statistics:   6%|██████                                                                                             | 4/66 [06:14<1:26:26, 83.65s/it, cur=backbone.layer1.2.conv1.out_channels(32/64): 0.01]
+Collecting pre-search statistics:   8%|███████▌                                                                                           | 5/66 [06:14<1:14:17, 73.07s/it, cur=backbone.layer1.2.conv1.out_channels(32/64): 0.01]
+Collecting pre-search statistics:   8%|███████▌                                                                                           | 5/66 [06:14<1:14:17, 73.07s/it, cur=backbone.layer1.2.conv1.out_channels(64/64): 0.00]
+Collecting pre-search statistics:   9%|████████▊                                                                                        | 6/66 [08:14<1:13:04, 73.07s/it, cur=backbone.layer2.0.conv1.out_channels(64/128): -0.00]
+Collecting pre-search statistics:  11%|██████████▎                                                                                      | 7/66 [08:14<1:07:38, 68.79s/it, cur=backbone.layer2.0.conv1.out_channels(64/128): -0.00]
+Collecting pre-search statistics:  11%|██████████▎                                                                                      | 7/66 [08:14<1:07:38, 68.79s/it, cur=backbone.layer2.0.conv1.out_channels(128/128): 0.00]
+Collecting pre-search statistics:  12%|███████████▉                                                                                      | 8/66 [10:15<1:06:29, 68.79s/it, cur=backbone.layer2.1.conv1.out_channels(64/128): 0.00]
+Collecting pre-search statistics:  14%|█████████████▎                                                                                    | 9/66 [10:15<1:03:20, 66.67s/it, cur=backbone.layer2.1.conv1.out_channels(64/128): 0.00]
+Collecting pre-search statistics:  14%|█████████████▏                                                                                   | 9/66 [10:15<1:03:20, 66.67s/it, cur=backbone.layer2.1.conv1.out_channels(128/128): 0.00]
+Collecting pre-search statistics:  15%|██████████████▌                                                                                 | 10/66 [12:12<1:02:13, 66.67s/it, cur=backbone.layer2.2.conv1.out_channels(64/128): -0.00]
+Collecting pre-search statistics:  17%|████████████████▎                                                                                 | 11/66 [12:12<59:22, 64.78s/it, cur=backbone.layer2.2.conv1.out_channels(64/128): -0.00]
+Collecting pre-search statistics:  17%|████████████████▎                                                                                 | 11/66 [12:12<59:22, 64.78s/it, cur=backbone.layer2.2.conv1.out_channels(128/128): 0.00]
+Collecting pre-search statistics:  18%|██████████████████                                                                                 | 12/66 [14:20<58:17, 64.78s/it, cur=backbone.layer2.3.conv1.out_channels(64/128): 0.01]
+Collecting pre-search statistics:  20%|███████████████████▌                                                                               | 13/66 [14:20<57:03, 64.60s/it, cur=backbone.layer2.3.conv1.out_channels(64/128): 0.01]
+Collecting pre-search statistics:  20%|███████████████████▎                                                                              | 13/66 [14:20<57:03, 64.60s/it, cur=backbone.layer2.3.conv1.out_channels(128/128): 0.00]
+Collecting pre-search statistics:  21%|████████████████████▊                                                                             | 14/66 [16:10<55:59, 64.60s/it, cur=backbone.layer3.0.conv1.out_channels(128/256): 0.01]
+Collecting pre-search statistics:  23%|██████████████████████▎                                                                           | 15/66 [16:10<53:24, 62.83s/it, cur=backbone.layer3.0.conv1.out_channels(128/256): 0.01]
+Collecting pre-search statistics:  23%|██████████████████████▎                                                                           | 15/66 [16:10<53:24, 62.83s/it, cur=backbone.layer3.0.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  24%|███████████████████████▊                                                                          | 16/66 [17:58<52:21, 62.83s/it, cur=backbone.layer3.1.conv1.out_channels(128/256): 0.01]
+Collecting pre-search statistics:  26%|█████████████████████████▏                                                                        | 17/66 [17:58<50:05, 61.34s/it, cur=backbone.layer3.1.conv1.out_channels(128/256): 0.01]
+Collecting pre-search statistics:  26%|█████████████████████████▏                                                                        | 17/66 [17:58<50:05, 61.34s/it, cur=backbone.layer3.1.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  27%|██████████████████████████▋                                                                       | 18/66 [19:50<49:04, 61.34s/it, cur=backbone.layer3.2.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  29%|████████████████████████████▏                                                                     | 19/66 [19:50<47:21, 60.47s/it, cur=backbone.layer3.2.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  29%|████████████████████████████▏                                                                     | 19/66 [19:50<47:21, 60.47s/it, cur=backbone.layer3.2.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  30%|█████████████████████████████▋                                                                    | 20/66 [21:37<46:21, 60.47s/it, cur=backbone.layer3.3.conv1.out_channels(128/256): 0.01]
+Collecting pre-search statistics:  32%|███████████████████████████████▏                                                                  | 21/66 [21:37<44:35, 59.46s/it, cur=backbone.layer3.3.conv1.out_channels(128/256): 0.01]
+Collecting pre-search statistics:  32%|███████████████████████████████▏                                                                  | 21/66 [21:37<44:35, 59.46s/it, cur=backbone.layer3.3.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  33%|████████████████████████████████▎                                                                | 22/66 [23:24<43:36, 59.46s/it, cur=backbone.layer3.4.conv1.out_channels(128/256): -0.00]
+Collecting pre-search statistics:  35%|█████████████████████████████████▊                                                               | 23/66 [23:24<42:01, 58.63s/it, cur=backbone.layer3.4.conv1.out_channels(128/256): -0.00]
+Collecting pre-search statistics:  35%|██████████████████████████████████▏                                                               | 23/66 [23:24<42:01, 58.63s/it, cur=backbone.layer3.4.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  36%|███████████████████████████████████▋                                                              | 24/66 [25:16<41:02, 58.63s/it, cur=backbone.layer3.5.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  38%|█████████████████████████████████████                                                             | 25/66 [25:16<39:46, 58.22s/it, cur=backbone.layer3.5.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  38%|█████████████████████████████████████                                                             | 25/66 [25:16<39:46, 58.22s/it, cur=backbone.layer3.5.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  39%|██████████████████████████████████████▌                                                           | 26/66 [27:20<38:48, 58.22s/it, cur=backbone.layer3.6.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  41%|████████████████████████████████████████                                                          | 27/66 [27:20<38:10, 58.74s/it, cur=backbone.layer3.6.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  41%|████████████████████████████████████████                                                          | 27/66 [27:20<38:10, 58.74s/it, cur=backbone.layer3.6.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  42%|█████████████████████████████████████████▌                                                        | 28/66 [29:15<37:12, 58.74s/it, cur=backbone.layer3.7.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  44%|███████████████████████████████████████████                                                       | 29/66 [29:15<36:06, 58.57s/it, cur=backbone.layer3.7.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  44%|███████████████████████████████████████████                                                       | 29/66 [29:15<36:06, 58.57s/it, cur=backbone.layer3.7.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  45%|████████████████████████████████████████████                                                     | 30/66 [31:11<35:08, 58.57s/it, cur=backbone.layer3.8.conv1.out_channels(128/256): -0.00]
+Collecting pre-search statistics:  47%|█████████████████████████████████████████████▌                                                   | 31/66 [31:11<34:08, 58.53s/it, cur=backbone.layer3.8.conv1.out_channels(128/256): -0.00]
+Collecting pre-search statistics:  47%|██████████████████████████████████████████████                                                    | 31/66 [31:11<34:08, 58.53s/it, cur=backbone.layer3.8.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  48%|███████████████████████████████████████████████▌                                                  | 32/66 [33:00<33:09, 58.53s/it, cur=backbone.layer3.9.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  50%|█████████████████████████████████████████████████                                                 | 33/66 [33:00<31:54, 58.02s/it, cur=backbone.layer3.9.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  50%|█████████████████████████████████████████████████                                                 | 33/66 [33:00<31:54, 58.02s/it, cur=backbone.layer3.9.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  52%|█████████████████████████████████████████████████▉                                               | 34/66 [34:47<30:56, 58.02s/it, cur=backbone.layer3.10.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  53%|███████████████████████████████████████████████████▍                                             | 35/66 [34:47<29:42, 57.51s/it, cur=backbone.layer3.10.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  53%|███████████████████████████████████████████████████▍                                             | 35/66 [34:47<29:42, 57.51s/it, cur=backbone.layer3.10.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  55%|████████████████████████████████████████████████████▉                                            | 36/66 [36:42<28:45, 57.51s/it, cur=backbone.layer3.11.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  56%|██████████████████████████████████████████████████████▍                                          | 37/66 [36:42<27:46, 57.48s/it, cur=backbone.layer3.11.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  56%|██████████████████████████████████████████████████████▍                                          | 37/66 [36:42<27:46, 57.48s/it, cur=backbone.layer3.11.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  58%|███████████████████████████████████████████████████████▊                                         | 38/66 [38:26<26:49, 57.48s/it, cur=backbone.layer3.12.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  59%|█████████████████████████████████████████████████████████▎                                       | 39/66 [38:26<25:35, 56.88s/it, cur=backbone.layer3.12.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  59%|█████████████████████████████████████████████████████████▎                                       | 39/66 [38:26<25:35, 56.88s/it, cur=backbone.layer3.12.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  61%|██████████████████████████████████████████████████████████▏                                     | 40/66 [40:14<24:38, 56.88s/it, cur=backbone.layer3.13.conv1.out_channels(128/256): -0.00]
+Collecting pre-search statistics:  62%|███████████████████████████████████████████████████████████▋                                    | 41/66 [40:14<23:32, 56.51s/it, cur=backbone.layer3.13.conv1.out_channels(128/256): -0.00]
+Collecting pre-search statistics:  62%|████████████████████████████████████████████████████████████▎                                    | 41/66 [40:14<23:32, 56.51s/it, cur=backbone.layer3.13.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  64%|█████████████████████████████████████████████████████████████                                   | 42/66 [42:11<22:36, 56.51s/it, cur=backbone.layer3.14.conv1.out_channels(128/256): -0.00]
+Collecting pre-search statistics:  65%|██████████████████████████████████████████████████████████████▌                                 | 43/66 [42:11<21:45, 56.78s/it, cur=backbone.layer3.14.conv1.out_channels(128/256): -0.00]
+Collecting pre-search statistics:  65%|███████████████████████████████████████████████████████████████▏                                 | 43/66 [42:11<21:45, 56.78s/it, cur=backbone.layer3.14.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  67%|████████████████████████████████████████████████████████████████▋                                | 44/66 [43:56<20:49, 56.78s/it, cur=backbone.layer3.15.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  68%|██████████████████████████████████████████████████████████████████▏                              | 45/66 [43:56<19:42, 56.30s/it, cur=backbone.layer3.15.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  68%|██████████████████████████████████████████████████████████████████▏                              | 45/66 [43:56<19:42, 56.30s/it, cur=backbone.layer3.15.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  70%|███████████████████████████████████████████████████████████████████▌                             | 46/66 [45:43<18:46, 56.30s/it, cur=backbone.layer3.16.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  71%|█████████████████████████████████████████████████████████████████████                            | 47/66 [45:43<17:43, 55.97s/it, cur=backbone.layer3.16.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  71%|█████████████████████████████████████████████████████████████████████                            | 47/66 [45:43<17:43, 55.97s/it, cur=backbone.layer3.16.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  73%|██████████████████████████████████████████████████████████████████████▌                          | 48/66 [47:35<16:47, 55.97s/it, cur=backbone.layer3.17.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  74%|████████████████████████████████████████████████████████████████████████                         | 49/66 [47:35<15:52, 56.00s/it, cur=backbone.layer3.17.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  74%|████████████████████████████████████████████████████████████████████████                         | 49/66 [47:35<15:52, 56.00s/it, cur=backbone.layer3.17.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  76%|█████████████████████████████████████████████████████████████████████████▍                       | 50/66 [49:22<14:56, 56.00s/it, cur=backbone.layer3.18.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  77%|██████████████████████████████████████████████████████████████████████████▉                      | 51/66 [49:22<13:56, 55.73s/it, cur=backbone.layer3.18.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  77%|██████████████████████████████████████████████████████████████████████████▉                      | 51/66 [49:22<13:56, 55.73s/it, cur=backbone.layer3.18.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  79%|████████████████████████████████████████████████████████████████████████████▍                    | 52/66 [51:10<13:00, 55.73s/it, cur=backbone.layer3.19.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  80%|█████████████████████████████████████████████████████████████████████████████▉                   | 53/66 [51:10<12:02, 55.54s/it, cur=backbone.layer3.19.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  80%|█████████████████████████████████████████████████████████████████████████████▉                   | 53/66 [51:10<12:02, 55.54s/it, cur=backbone.layer3.19.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  82%|██████████████████████████████████████████████████████████████████████████████▌                 | 54/66 [53:05<11:06, 55.54s/it, cur=backbone.layer3.20.conv1.out_channels(128/256): -0.00]
+Collecting pre-search statistics:  83%|████████████████████████████████████████████████████████████████████████████████                | 55/66 [53:05<10:13, 55.73s/it, cur=backbone.layer3.20.conv1.out_channels(128/256): -0.00]
+Collecting pre-search statistics:  83%|████████████████████████████████████████████████████████████████████████████████▊                | 55/66 [53:05<10:13, 55.73s/it, cur=backbone.layer3.20.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  85%|██████████████████████████████████████████████████████████████████████████████████▎              | 56/66 [55:04<09:17, 55.73s/it, cur=backbone.layer3.21.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  86%|███████████████████████████████████████████████████████████████████████████████████▊             | 57/66 [55:04<08:25, 56.11s/it, cur=backbone.layer3.21.conv1.out_channels(128/256): 0.00]
+Collecting pre-search statistics:  86%|███████████████████████████████████████████████████████████████████████████████████▊             | 57/66 [55:04<08:25, 56.11s/it, cur=backbone.layer3.21.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  88%|████████████████████████████████████████████████████████████████████████████████████▎           | 58/66 [57:09<07:28, 56.11s/it, cur=backbone.layer3.22.conv1.out_channels(128/256): -0.00]
+Collecting pre-search statistics:  89%|█████████████████████████████████████████████████████████████████████████████████████▊          | 59/66 [57:09<06:37, 56.78s/it, cur=backbone.layer3.22.conv1.out_channels(128/256): -0.00]
+Collecting pre-search statistics:  89%|██████████████████████████████████████████████████████████████████████████████████████▋          | 59/66 [57:09<06:37, 56.78s/it, cur=backbone.layer3.22.conv1.out_channels(256/256): 0.00]
+Collecting pre-search statistics:  91%|█████████████████████████████████████████████████████████████████████████████████████████         | 60/66 [59:14<05:40, 56.78s/it, cur=backbone.layer4.0.conv1.out_channels(256/512): 0.02]
+Collecting pre-search statistics:  92%|██████████████████████████████████████████████████████████████████████████████████████████▌       | 61/66 [59:14<04:46, 57.39s/it, cur=backbone.layer4.0.conv1.out_channels(256/512): 0.02]
+Collecting pre-search statistics:  92%|██████████████████████████████████████████████████████████████████████████████████████████▌       | 61/66 [59:14<04:46, 57.39s/it, cur=backbone.layer4.0.conv1.out_channels(512/512): 0.00]
+Collecting pre-search statistics:  94%|██████████████████████████████████████████████████████████████████████████████████████████▏     | 62/66 [1:01:00<03:49, 57.39s/it, cur=backbone.layer4.1.conv1.out_channels(256/512): 0.00]
+Collecting pre-search statistics:  95%|███████████████████████████████████████████████████████████████████████████████████████████▋    | 63/66 [1:01:00<02:50, 56.92s/it, cur=backbone.layer4.1.conv1.out_channels(256/512): 0.00]
+Collecting pre-search statistics:  95%|███████████████████████████████████████████████████████████████████████████████████████████▋    | 63/66 [1:01:00<02:50, 56.92s/it, cur=backbone.layer4.1.conv1.out_channels(512/512): 0.00]
+Collecting pre-search statistics:  97%|████████████████████████████████████████████████████████████████████████████████████████████   | 64/66 [1:02:46<01:53, 56.92s/it, cur=backbone.layer4.2.conv1.out_channels(256/512): -0.00]
+Collecting pre-search statistics:  98%|█████████████████████████████████████████████████████████████████████████████████████████████▌ | 65/66 [1:02:46<00:56, 56.55s/it, cur=backbone.layer4.2.conv1.out_channels(256/512): -0.00]
+Collecting pre-search statistics:  98%|██████████████████████████████████████████████████████████████████████████████████████████████▌ | 65/66 [1:02:46<00:56, 56.55s/it, cur=backbone.layer4.2.conv1.out_channels(512/512): 0.00]
+Collecting pre-search statistics: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 66/66 [1:02:46<00:00, 57.07s/it, cur=backbone.layer4.2.conv1.out_channels(512/512): 0.00]
+
+  0%|                                                                                                                                                                                                    | 0/5000 [00:00<?, ?it/s]
+  0%|                                                                                                                                                                                          | 1/5000 [00:02<4:00:41,  2.89s/it]
+[num_satisfied] = 1:   0%|                                                                                                                                                                     | 1/5000 [00:02<4:00:41,  2.89s/it]
+[num_satisfied] = 1:   0%|                                                                                                                                                                     | 2/5000 [00:05<3:57:51,  2.86s/it]
+[num_satisfied] = 2:   0%|                                                                                                                                                                     | 2/5000 [00:05<3:57:51,  2.86s/it]
+[num_satisfied] = 2:   0%|                                                                                                                                                                     | 3/5000 [00:12<6:29:20,  4.67s/it]
+[num_satisfied] = 3:   0%|                                                                                                                                                                     | 3/5000 [00:12<6:29:20,  4.67s/it]
+[num_satisfied] = 3:   0%|▏                                                                                                                                                                    | 4/5000 [00:15<5:33:18,  4.00s/it]
+[num_satisfied] = 4:   0%|▏                                                                                                                                                                    | 4/5000 [00:15<5:33:18,  4.00s/it]
+[num_satisfied] = 4:   0%|▏                                                                                                                                                                    | 5/5000 [00:18<5:08:31,  3.71s/it]
+[num_satisfied] = 5:   0%|▏                                                                                                                                                                    | 5/5000 [00:18<5:08:31,  3.71s/it]
+[num_satisfied] = 6:   0%|▏                                                                                                                                                                    | 6/5000 [00:18<5:08:27,  3.71s/it]
+[num_satisfied] = 6:   0%|▏                                                                                                                                                                    | 7/5000 [00:21<3:34:52,  2.58s/it]
+[num_satisfied] = 7:   0%|▏                                                                                                                                                                    | 7/5000 [00:21<3:34:52,  2.58s/it]
+[num_satisfied] = 8:   0%|▎                                                                                                                                                                    | 8/5000 [00:21<3:34:50,  2.58s/it]
+[num_satisfied] = 9:   0%|▎                                                                                                                                                                    | 9/5000 [00:21<3:34:47,  2.58s/it]
+[num_satisfied] = 10:   0%|▎                                                                                                                                                                  | 10/5000 [00:21<3:34:45,  2.58s/it]
+[num_satisfied] = 10:   0%|▎                                                                                                                                                                  | 10/5000 [00:21<3:00:38,  2.17s/it]
+[best_subnet_constraints] = {'params': '37.94M', 'flops': '284.33G'}
+
+========================================================================
+[TRACKER] score_func report
+========================================================================
+[TRACKER] total calls: 34
+[TRACKER] score range: [0.033959, 0.054129]
+[TRACKER] score mean: 0.046956
+[TRACKER] best call: #013, score=0.054129
+[TRACKER] first call: 2026-03-26 15:20:18
+[TRACKER] last call: 2026-03-26 16:23:05
+  #001 2026-03-26 15:20:18 mAP=0.049224 elapsed=106.58s
+  #002 2026-03-26 15:22:33 mAP=0.043885 elapsed=134.74s
+  #003 2026-03-26 15:24:34 mAP=0.048615 elapsed=121.31s
+  #004 2026-03-26 15:26:33 mAP=0.044071 elapsed=118.52s
+  #005 2026-03-26 15:28:32 mAP=0.049729 elapsed=119.79s
+  #006 2026-03-26 15:30:34 mAP=0.045686 elapsed=121.60s
+  #007 2026-03-26 15:32:31 mAP=0.050351 elapsed=116.73s
+  #008 2026-03-26 15:34:39 mAP=0.039083 elapsed=127.81s
+  #009 2026-03-26 15:36:28 mAP=0.042327 elapsed=109.91s
+  #010 2026-03-26 15:38:16 mAP=0.036566 elapsed=107.96s
+  #011 2026-03-26 15:40:08 mAP=0.044989 elapsed=111.67s
+  #012 2026-03-26 15:41:56 mAP=0.044062 elapsed=107.51s
+  #013 2026-03-26 15:43:43 mAP=0.054129 elapsed=107.19s
+  #014 2026-03-26 15:45:34 mAP=0.049051 elapsed=111.20s
+  #015 2026-03-26 15:47:38 mAP=0.046250 elapsed=124.38s
+  #016 2026-03-26 15:49:33 mAP=0.046994 elapsed=114.74s
+  #017 2026-03-26 15:51:30 mAP=0.049953 elapsed=116.50s
+  #018 2026-03-26 15:53:18 mAP=0.048688 elapsed=108.69s
+  #019 2026-03-26 15:55:06 mAP=0.048493 elapsed=107.45s
+  #020 2026-03-26 15:57:00 mAP=0.047845 elapsed=114.48s
+  #021 2026-03-26 15:58:45 mAP=0.048402 elapsed=104.43s
+  #022 2026-03-26 16:00:32 mAP=0.050376 elapsed=107.37s
+  #023 2026-03-26 16:02:30 mAP=0.053436 elapsed=117.77s
+  #024 2026-03-26 16:04:15 mAP=0.045817 elapsed=104.93s
+  #025 2026-03-26 16:06:01 mAP=0.047402 elapsed=106.43s
+  #026 2026-03-26 16:07:54 mAP=0.046122 elapsed=112.59s
+  #027 2026-03-26 16:09:41 mAP=0.044946 elapsed=106.98s
+  #028 2026-03-26 16:11:29 mAP=0.047446 elapsed=107.82s
+  #029 2026-03-26 16:13:23 mAP=0.050632 elapsed=114.69s
+  #030 2026-03-26 16:15:22 mAP=0.046570 elapsed=118.73s
+  #031 2026-03-26 16:17:27 mAP=0.053240 elapsed=124.91s
+  #032 2026-03-26 16:19:32 mAP=0.033959 elapsed=125.34s
+  #033 2026-03-26 16:21:18 mAP=0.047746 elapsed=105.62s
+  #034 2026-03-26 16:23:05 mAP=0.050423 elapsed=106.67s
+========================================================================
+
+[INFO] saved score call history: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_calls_20260326_150910_452188.pkl
+[INFO] search-phase best score_func mAP: 0.054129 (call #013)
+
+========================================================================
+[DIAG] === Pre-export diagnostic evaluations ===
+========================================================================
+
+[DIAG-A] eval full model with current backbone (supernet, best subnet active)...
+Start to convert detection format...
+Results writes to /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc.json
+Start to convert detection format...
+Results writes to /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc_det.json
+Initializing nuScenes detection evaluation
+Loaded results from /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc_det.json. Found detections for 196 samples.
+Loading annotations for val split from nuScenes version: v1.0-trainval
+
+  0%|                                                                                                                                                                                                     | 0/675 [00:00<?, ?it/s]
+ 34%|██████████████████████████████████████████████████████████████▏                                                                                                                          | 227/675 [00:00<00:00, 2266.50it/s]
+ 67%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                            | 454/675 [00:00<00:00, 1594.09it/s]
+ 93%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎             | 625/675 [00:00<00:00, 1388.20it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 675/675 [00:00<00:00, 1403.80it/s]
+Loaded ground truth annotations for 675 samples.
+[PATCH] NuScenesEval subset mode: GT filtered to 196 pred tokens
+=> Original number of boxes: 56311
+=> After distance based filtering: 56306
+=> After LIDAR and RADAR points based filtering: 56306
+=> After bike rack filtering: 56306
+=> Original number of boxes: 3477
+=> After distance based filtering: 2622
+=> After LIDAR and RADAR points based filtering: 2622
+=> After bike rack filtering: 2622
+Accumulating metric data...
+Calculating metrics...
+Saving metrics to: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/det
+mAP: 0.0514
+mATE: 1.0188
+mASE: 0.7887
+mAOE: 0.9719
+mAVE: 1.3539
+mAAE: 1.0000
+NDS: 0.0497
+Eval time: 4.1s
+
+Per-class results:
+Object Class        	AP    	ATE   	ASE   	AOE   	AVE   	AAE   
+car                 	0.302 	0.944 	0.194 	0.181 	2.612 	1.000 
+truck               	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+bus                 	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+trailer             	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+construction_vehicle	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+pedestrian          	0.024 	1.215 	0.402 	1.738 	0.747 	1.000 
+motorcycle          	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+bicycle             	0.187 	1.028 	0.291 	0.828 	2.473 	1.000 
+traffic_cone        	0.000 	1.000 	1.000 	nan   	nan   	nan   
+barrier             	0.000 	1.000 	1.000 	1.000 	nan   	nan   
+[DIAG-A] supernet backbone mAP: 0.051408
+
+[DIAG-B] restoring original backbone and verifying (should match baseline)...
+Start to convert detection format...
+Results writes to /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc.json
+Start to convert detection format...
+Results writes to /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc_det.json
+Initializing nuScenes detection evaluation
+Loaded results from /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc_det.json. Found detections for 196 samples.
+Loading annotations for val split from nuScenes version: v1.0-trainval
+
+  0%|                                                                                                                                                                                                     | 0/675 [00:00<?, ?it/s]
+ 37%|████████████████████████████████████████████████████████████████████▌                                                                                                                    | 250/675 [00:00<00:00, 2495.46it/s]
+ 74%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                | 500/675 [00:00<00:00, 1515.89it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍| 673/675 [00:00<00:00, 1296.67it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 675/675 [00:00<00:00, 1407.32it/s]
+Loaded ground truth annotations for 675 samples.
+[PATCH] NuScenesEval subset mode: GT filtered to 196 pred tokens
+=> Original number of boxes: 57482
+=> After distance based filtering: 57481
+=> After LIDAR and RADAR points based filtering: 57481
+=> After bike rack filtering: 57481
+=> Original number of boxes: 3477
+=> After distance based filtering: 2622
+=> After LIDAR and RADAR points based filtering: 2622
+=> After bike rack filtering: 2622
+Accumulating metric data...
+Calculating metrics...
+Saving metrics to: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/det
+mAP: 0.0739
+mATE: 0.9895
+mASE: 0.7779
+mAOE: 0.9117
+mAVE: 1.0658
+mAAE: 1.0000
+NDS: 0.0691
+Eval time: 4.3s
+
+Per-class results:
+Object Class        	AP    	ATE   	ASE   	AOE   	AVE   	AAE   
+car                 	0.406 	0.824 	0.165 	0.134 	1.078 	1.000 
+truck               	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+bus                 	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+trailer             	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+construction_vehicle	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+pedestrian          	0.061 	1.120 	0.371 	1.339 	0.936 	1.000 
+motorcycle          	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+bicycle             	0.273 	0.951 	0.242 	0.733 	1.512 	1.000 
+traffic_cone        	0.000 	1.000 	1.000 	nan   	nan   	nan   
+barrier             	0.000 	1.000 	1.000 	1.000 	nan   	nan   
+[DIAG-B] original backbone mAP: 0.073935 (baseline was 0.073935)
+[DIAG-B][OK] original backbone integrity verified.
+
+========================================================================
+[VALIDATE] === Post-export backbone validation (Fix 5) ===
+========================================================================
+[VALIDATE][OK] layer1 output channels: 256 (matches original)
+[VALIDATE][OK] layer2 output channels: 512 (matches original)
+[VALIDATE][OK] layer3 output channels: 1024 (matches original)
+[VALIDATE][OK] layer4 output channels: 2048 (matches original)
+[VALIDATE][WARN] bn1.running_var max abs=67681.4219 (unusually large)
+[VALIDATE] all checks passed.
+[INFO] backbone params after pruning: 38.041 M
+[INFO] full model params after pruning: 93.827 M
+[INFO] backbone kept ratio: 89.51%
+[INFO] full-model kept ratio: 95.46%
+
+[DIAG-C] eval full model with exported pruned backbone...
+Start to convert detection format...
+Results writes to /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc.json
+Start to convert detection format...
+Results writes to /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc_det.json
+Initializing nuScenes detection evaluation
+Loaded results from /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/results_nusc_det.json. Found detections for 196 samples.
+Loading annotations for val split from nuScenes version: v1.0-trainval
+
+  0%|                                                                                                                                                                                                     | 0/675 [00:00<?, ?it/s]
+ 36%|███████████████████████████████████████████████████████████████████▍                                                                                                                     | 246/675 [00:00<00:00, 2452.68it/s]
+ 73%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                  | 492/675 [00:00<00:00, 1454.16it/s]
+ 98%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉    | 660/675 [00:00<00:00, 1290.23it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 675/675 [00:00<00:00, 1368.89it/s]
+Loaded ground truth annotations for 675 samples.
+[PATCH] NuScenesEval subset mode: GT filtered to 196 pred tokens
+=> Original number of boxes: 56311
+=> After distance based filtering: 56306
+=> After LIDAR and RADAR points based filtering: 56306
+=> After bike rack filtering: 56306
+=> Original number of boxes: 3477
+=> After distance based filtering: 2622
+=> After LIDAR and RADAR points based filtering: 2622
+=> After bike rack filtering: 2622
+Accumulating metric data...
+Calculating metrics...
+Saving metrics to: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/score_eval_tmp/univ2x_sub_inf_e2e_track/20260326_150910_452188/det
+mAP: 0.0514
+mATE: 1.0188
+mASE: 0.7887
+mAOE: 0.9719
+mAVE: 1.3539
+mAAE: 1.0000
+NDS: 0.0497
+Eval time: 4.0s
+
+Per-class results:
+Object Class        	AP    	ATE   	ASE   	AOE   	AVE   	AAE   
+car                 	0.302 	0.944 	0.194 	0.181 	2.612 	1.000 
+truck               	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+bus                 	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+trailer             	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+construction_vehicle	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+pedestrian          	0.024 	1.215 	0.402 	1.738 	0.747 	1.000 
+motorcycle          	0.000 	1.000 	1.000 	1.000 	1.000 	1.000 
+bicycle             	0.187 	1.028 	0.291 	0.828 	2.473 	1.000 
+traffic_cone        	0.000 	1.000 	1.000 	nan   	nan   	nan   
+barrier             	0.000 	1.000 	1.000 	1.000 	nan   	nan   
+[INFO] final selected backbone mAP on score split: 0.051408
+[INFO] selected subnet evaluated score (mAP): 0.051408
+
+========================================================================
+[DIAG] === Diagnostic Summary ===
+  baseline mAP (original model):           0.073935
+  DIAG-B (original backbone restored):     0.073935
+  DIAG-A (supernet, best subnet active):   0.051408
+  DIAG-C (exported pruned backbone):       0.051408
+  backbone kept ratio:                     89.51%
+  validation passed:                       True
+========================================================================
+[INFO] save pruned backbone modelopt: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/univ2x_inf_track_backbone_pruned_20260326_150910_452188_backbone_modelopt.pth
+[INFO] save full model with pruned backbone (modelopt): /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/univ2x_inf_track_backbone_pruned_20260326_150910_452188_full_modelopt.pth
+[INFO] saved prune stats: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/univ2x_inf_track_backbone_pruned_20260326_150910_452188_prune_stats.pkl
+[INFO] saved summary: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/univ2x_inf_track_backbone_pruned_20260326_150910_452188_summary.pkl
+
+========================================================================
+[INFO] Backbone-only pruning finished.
+[INFO] baseline mAP=0.073935 -> final mAP=0.051408
+[INFO] backbone kept ratio: 89.51%
+[INFO] outputs: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188
+========================================================================
