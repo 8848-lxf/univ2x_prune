@@ -1,0 +1,62 @@
+[INFO] 评估日志保存至: /home/lixingfeng/UniAD_exmaine/UniV2X/univ2x_purned/modelopt/logs_eval_inf_track_prune_backbone_byclaude.py/eval_20260328_231642.log
+[INFO] 配置文件: ./projects/configs_e2e_univ2x/univ2x_sub_inf_e2e_track.py
+[INFO] 原始 checkpoint: ./ckpts/univ2x_sub_inf_stg1.pth
+[INFO] backbone modelopt: ./univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/univ2x_inf_track_backbone_pruned_20260326_150910_452188_backbone_modelopt.pth
+[INFO] 微调模型: ./univ2x_purned/modelopt/inf_track_finetune_byclaude/models/20260327_215005/epoch_12.pth
+[INFO] 评估任务: ['det', 'track', 'map']
+[INFO] 评估指标: ['bbox']
+[INFO] 模式: run_all_subsets（依次评估 full / skip_warmup / head）
+[PATCH] NuScenesEval_custom patched
+[PATCH] TrackingEval_custom patched
+[INFO] 加载插件模块: projects.mmdet3d_plugin
+[INFO] 使用设备: cuda:6
+[INFO] 正在构建 MultiAgent 模型 + 加载原始 checkpoint...
+load checkpoint from local path: ./ckpts/univ2x_sub_inf_stg1.pth
+The model and loaded state dict do not match exactly
+
+unexpected key in source state_dict: model_ego_agent.linear1.weight, model_ego_agent.linear1.bias, model_ego_agent.linear2.weight, model_ego_agent.linear2.bias, model_ego_agent.linear_feat1.weight, model_ego_agent.linear_feat1.bias, model_ego_agent.linear_feat2.weight, model_ego_agent.linear_feat2.bias, model_ego_agent.norm_feat.weight, model_ego_agent.norm_feat.bias, model_ego_agent.norm1.weight, model_ego_agent.norm1.bias, model_ego_agent.norm2.weight, model_ego_agent.norm2.bias, model_ego_agent.self_attn.in_proj_weight, model_ego_agent.self_attn.in_proj_bias, model_ego_agent.self_attn.out_proj.weight, model_ego_agent.self_attn.out_proj.bias, model_ego_agent.img_backbone.layer3.0.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.0.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.1.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.1.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.2.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.2.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.3.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.3.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.4.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.4.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.5.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.5.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.6.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.6.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.7.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.7.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.8.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.8.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.9.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.9.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.10.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.10.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.11.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.11.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.12.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.12.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.13.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.13.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.14.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.14.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.15.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.15.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.16.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.16.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.17.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.17.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.18.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.18.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.19.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.19.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.20.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.20.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.21.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.21.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer3.22.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer3.22.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer4.0.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer4.0.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer4.1.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer4.1.conv2.conv_offset.bias, model_ego_agent.img_backbone.layer4.2.conv2.conv_offset.weight, model_ego_agent.img_backbone.layer4.2.conv2.conv_offset.bias
+
+[INFO] 原始模型参数量: 98.29 M
+[INFO] 原始 backbone 参数量: 42.50 M
+[INFO] 正在恢复剪枝 backbone: ./univ2x_purned/modelopt/univ2x_inf_track_prune_backbone_byclaude/out/20260326_150910_452188/univ2x_inf_track_backbone_pruned_20260326_150910_452188_backbone_modelopt.pth
+[INFO] mto.restore backbone 完成
+[INFO] 剪枝 backbone 已回填到 full_model
+[INFO] 剪枝后 backbone 参数量: 38.04 M (保留 89.51%)
+[INFO] 正在加载微调 checkpoint: ./univ2x_purned/modelopt/inf_track_finetune_byclaude/models/20260327_215005/epoch_12.pth
+load checkpoint from local path: ./univ2x_purned/modelopt/inf_track_finetune_byclaude/models/20260327_215005/epoch_12.pth
+[INFO] 微调 checkpoint 加载完成（strict=False）
+[INFO] 剪枝后全模型参数量: 93.83 M
+[INFO] 全模型参数保留比例: 95.46%
+[INFO] 构建完整 val 数据集...
+======
+Loading NuScenes tables for version v1.0-trainval...
+4 category,
+0 attribute,
+4 visibility,
+2324 instance,
+4 sensor,
+2 calibrated_sensor,
+2196 ego_pose,
+6 log,
+67 scene,
+2196 sample,
+2196 sample_data,
+38859 sample_annotation,
+6 map,
+Done loading in 0.451 seconds.
+======
+Reverse indexing ...
+Done reverse indexing in 0.1 seconds.
+======
+[INFO] 完整 val 数据集大小: 675
+
+======================================================================
+[EVAL] 开始评估子集: full
+======================================================================
+[INFO] [full] 数据集大小: 675, eval_mod=['det', 'track', 'map']
+WARNING!!!!, Only can be used for obtain inference speed!!!!
+[INFO] [full] 开始推理...
+[INFO] [full] 推理完成，675 个样本
+[CHECK] outputs summary: total=675, none=0, empty=0, nonzero_box_samples=675, total_boxes=9764
+[CHECK] first non-empty output keys: ['token', 'track_bbox_results', 'boxes_3d', 'scores_3d', 'labels_3d', 'track_scores', 'track_ids', 'boxes_3d_det', 'scores_3d_det', 'labels_3d_det', 'ret_iou']
+Start to convert detection format...
